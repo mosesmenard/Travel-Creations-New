@@ -474,7 +474,52 @@ document.addEventListener("DOMContentLoaded", () => {
       e.preventDefault();
       alert("Thank you for subscribing! Check your email for updates and offers.");
     });
-     // Close mobile menu when resizing to desktop
+  }
+
+  /* ========== Slider with Dots ========== */
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  const dotsContainer = document.querySelector(".slider-dots");
+
+  if (dotsContainer && slides.length > 0) {
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.addEventListener("click", () => {
+        currentSlide = i;
+        showSlide(currentSlide);
+        resetAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  const dots = dotsContainer ? dotsContainer.querySelectorAll("button") : [];
+
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle("active", i === index));
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  const prevBtn = document.querySelector(".slider-btn.prev");
+  const nextBtn = document.querySelector(".slider-btn.next");
+  if (prevBtn) prevBtn.onclick = () => { changeSlide(-1); resetAutoSlide(); };
+  if (nextBtn) nextBtn.onclick = () => { changeSlide(1); resetAutoSlide(); };
+
+  let autoSlide = setInterval(() => changeSlide(1), 5000);
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => changeSlide(1), 5000);
+  }
+
+  if (slides.length > 0) showSlide(currentSlide);
+});
+   // Close mobile menu when resizing to desktop
 window.addEventListener('resize', function() {
   const menu = document.getElementById('mobileMenu');
   if (window.innerWidth >= 768) {
