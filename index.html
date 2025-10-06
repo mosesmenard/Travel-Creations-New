@@ -473,47 +473,6 @@
         link.addEventListener('click', () => toggleMobileMenu(true));
     });
 
-    // Flight Search Validation
-    document.getElementById('flightSearchForm').addEventListener('submit', function(e) {
-        e.preventDefault();
-
-        // Reset error messages
-        document.querySelectorAll('.error-message').forEach(el => el.classList.remove('active'));
-
-        const adults = parseInt(document.getElementById('adults').value);
-        const infants = parseInt(document.getElementById('infants').value);
-        const children = parseInt(document.getElementById('children').value);
-        const youth = parseInt(document.getElementById('youth').value);
-        const seniors = parseInt(document.getElementById('seniors').value);
-        const totalTravelers = adults + infants + children + youth + seniors;
-        const travelerTypes = [adults, infants, children, youth, seniors].filter(num => num > 0).length;
-
-        let valid = true;
-        if (infants > 0 && adults === 0) {
-            document.getElementById('infantError').classList.add('active');
-            valid = false;
-        }
-        if (children > 0 && adults === 0) {
-            document.getElementById('childError').classList.add('active');
-            valid = false;
-        }
-        if (travelerTypes > 4) {
-            document.getElementById('travelerTypeError').classList.add('active');
-            valid = false;
-        }
-        if (totalTravelers === 0) {
-            document.getElementById('minTravelerError').classList.add('active');
-            valid = false;
-        }
-        if (totalTravelers > 9) {
-            document.getElementById('maxTravelerError').classList.add('active');
-            valid = false;
-        }
-
-        if (valid) {
-            alert('Searching for your flight...'); // Placeholder for booking engine API call
-        }
-    });
 
     // Newsletter placeholder fix
     const newsletterForm = document.getElementById('newsletterForm');
