@@ -6,16 +6,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Travel Creations - Your premier travel agency in Nairobi, Kenya for corporate and leisure travel">
 <title>Travel Creations | Imagine it we create it</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 <link href="./dist/output.css" rel="stylesheet">
 
 <style>
   
-  html {
-    font-size: 14px; /* Default is usually 16px; reduce slightly for the whole page */
-}
-  body { font-family: 'Open Sans', sans-serif; font-size: 0.85rem;}
-  h1,h2,h3 { font-family: 'Montserrat', sans-serif; }
+  html { font-size: 14px; }
+  body { font-family: 'Open Sans', sans-serif; }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }
 
   .header-top-bg { background-color: #1E3A8A; }
   .header-bg { background-color: #FFFFFF; }
@@ -214,156 +212,32 @@
   </div>
 </section>
 
-    <!-- Flight Search Form Section -->
-    <section id="booking-form" class="py-12 bg-white">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Find Your Perfect Flight</h2>
-            <div class="max-w-4xl mx-auto bg-gray-50 p-6 rounded-lg shadow-lg">
-                <form id="flightSearchForm" class="space-y-4">
-                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                        <div class="flex-1">
-                            <label for="destination" class="block text-sm font-medium text-gray-700">Destination</label>
-                            <input type="text" id="destination" placeholder="e.g., Nairobi, Maasai Mara, Dubai" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500" aria-required="true" required>
-                        </div>
-                        <div class="flex-1">
-                            <label for="departure-date" class="block text-sm font-medium text-gray-700">Departure Date</label>
-                            <input type="date" id="departure-date" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500" aria-required="true" required>
-                        </div>
-                        <div class="flex-1">
-                            <label for="return-date" class="block text-sm font-medium text-gray-700">Return Date</label>
-                            <input type="date" id="return-date" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                        </div>
-                    </div>
-                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                        <div class="flex-1">
-                            <label for="date-variants" class="block text-sm font-medium text-gray-700">Date Flexibility</label>
-                            <select id="date-variants" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="exact">Exact Dates</option>
-                                <option value="plus-minus-1">+/- 1 Day</option>
-                                <option value="plus-minus-2">+/- 2 Days</option>
-                                <option value="plus-minus-3">+/- 3 Days</option>
-                                <option value="weekends">Prolonged Weekends</option>
-                            </select>
-                        </div>
-                        <div class="flex-1">
-                            <label for="airline" class="block text-sm font-medium text-gray-700">Preferred Airline</label>
-                            <input type="text" id="airline" placeholder="e.g., Kenya Airways" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                        </div>
-                        <div class="flex-1">
-                            <label for="search-type" class="block text-sm font-medium text-gray-700">Search By</label>
-                            <select id="search-type" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="schedule">Based on Schedule</option>
-                                <option value="price">Based on Total Price</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-                        <div class="flex-1">
-                            <label for="class" class="block text-sm font-medium text-gray-700">Class</label>
-                            <select id="class" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="economy">Economy</option>
-                                <option value="premium-economy">Premium Economy</option>
-                                <option value="business">Business</option>
-                            </select>
-                        </div>
-                        <div class="flex-1">
-                            <label for="transfers" class="block text-sm font-medium text-gray-700">Flight Type</label>
-                            <select id="transfers" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="transfers">Including Transfers</option>
-                                <option value="direct">Only Direct Flights</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
-                        <div>
-                            <label for="adults" class="block text-sm font-medium text-gray-700">Adults</label>
-                            <select id="adults" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="0">0</option>
-                                <option value="1" selected>1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="infants" class="block text-sm font-medium text-gray-700">Infants (0-2)</label>
-                            <select id="infants" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="0" selected>0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="children" class="block text-sm font-medium text-gray-700">Children (2-11)</label>
-                            <select id="children" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="0" selected>0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="youth" class="block text-sm font-medium text-gray-700">Youth (12-24)</label>
-                            <select id="youth" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="0" selected>0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="seniors" class="block text-sm font-medium text-gray-700">Seniors (60+)</label>
-                            <select id="seniors" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
-                                <option value="0" selected>0</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div id="errorMessages" class="space-y-2">
-                        <p id="infantError" class="error-message">Infants cannot travel without company.</p>
-                        <p id="childError" class="error-message">Children cannot travel alone.</p>
-                        <p id="travelerTypeError" class="error-message">Maximum count of traveler types is 4.</p>
-                        <p id="minTravelerError" class="error-message">You have to choose at least one traveler.</p>
-                        <p id="maxTravelerError" class="error-message">Maximum count of travelers is 9.</p>
-                    </div>
-					<button type="submit" class="search-button w-full bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold" aria-label="Search Flights">Search Flights</button>
-            
-                <p class="text-sm text-gray-600 mt-4 text-center">Secure booking with PCI DSS compliance. Powered by GOLIBE.</p>
+<!-- Flight Search Form Section -->
+<section id="booking-form" class="py-12 bg-white">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Find Your Perfect Flight</h2>
+
+    <div class="max-w-4xl mx-auto bg-gray-50 p-6 rounded-lg shadow-lg">
+      
+      <!-- GOL IBE Flight Search Engine -->
+      <div id="golibe-flight-form" class="main-wrapper">
+        <div class="engine-wrapper">
+          <div class="engine engine-en" id="IBEFlightSearchForm">
+            <div class="engine-loader">
+              <div class="spinner"></div>
             </div>
+            <!-- The actual flight search UI will be dynamically injected by HTMLPackageControl.js -->
+          </div>
         </div>
-    </section>
+      </div>
+
+      <p class="text-sm text-gray-600 mt-4 text-center">
+        Secure booking with PCI DSS compliance. Powered by GOLIBE.
+      </p>
+    </div>
+  </div>
+</section>
+
 
    <!-- Four Column Info Section -->
 <section class="py-12 bg-white">
@@ -683,5 +557,26 @@
     });
   });
 </script>
+<!-- GOL IBE engine dependencies -->
+<link rel="stylesheet" href="https://travelcreations.golibe.com/engine/css/ao3.css">
+<script src="https://travelcreations.golibe.com/engine/js/jquery.min.js"></script>
+<script src="https://travelcreations.golibe.com/engine/js/ao3.min.js"></script>
+
+<!-- Local GOL IBE configuration -->
+<script src="__ENV.js"></script>
+<script src="config.en.js"></script>
+<script src="HTMLPackageControl.js"></script>
+
+<!-- Initialize the GOL IBE package -->
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    if (typeof HTMLPackageControl !== "undefined") {
+      new HTMLPackageControl();
+    } else {
+      console.error("HTMLPackageControl not found. Check that __ENV.js, config.en.js, and HTMLPackageControl.js are loaded correctly.");
+    }
+  });
+</script>
+
 </body>
 </html>

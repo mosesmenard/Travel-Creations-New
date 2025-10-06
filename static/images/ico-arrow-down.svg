@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="11px" height="9px" viewBox="0 0 11 9" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Triangle Copy</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ICO/arrow" transform="translate(1.000000, 0.000000)" fill="#E85E20">
+            <path d="M5.35328183,1.39627936 L9.07022499,7.47854999 C9.35821388,7.94980453 9.20964771,8.56529295 8.73839317,8.85328183 C8.58138526,8.94923111 8.40094791,9 8.21694316,9 L0.783056839,9 C0.23077209,9 -0.216943161,8.55228475 -0.216943161,8 C-0.216943161,7.81599525 -0.166174275,7.6355579 -0.0702249942,7.47854999 L3.64671817,1.39627936 C3.93470705,0.92502482 4.55019547,0.776458652 5.02145001,1.06444754 C5.1568159,1.14717114 5.27055823,1.26091347 5.35328183,1.39627936 Z" id="Triangle-Copy" transform="translate(4.500000, 4.500000) scale(1, -1) translate(-4.500000, -4.500000) "></path>
+        </g>
+    </g>
+</svg>

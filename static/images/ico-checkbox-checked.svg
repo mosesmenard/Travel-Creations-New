@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="22px" viewBox="0 0 22 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 50.2 (55047) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 4</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="checkbox/checked">
+            <g id="Group-4">
+                <rect id="Rectangle-6-Copy" fill="#E85E20" x="0" y="0" width="22" height="22" rx="3"></rect>
+                <path d="M6.37916371,11.3102634 L8.1227898,13.0502628 L9.0295844,13.954787 C9.51787239,14.4595155 10.3372585,14.4595155 10.8428102,13.954787 L11.7499682,13.0502628 L15.6208363,9.18732289 C16.1263879,8.68295687 16.1263879,7.86524236 15.6208363,7.37827452 C15.1325483,6.87390849 14.3133439,6.87390849 13.8076105,7.37827452 L9.93656072,11.2406707 L8.19293463,9.50067138 C7.68738302,8.99576166 6.88471533,8.99576166 6.37916371,9.50067138 C5.8736121,10.0055811 5.8736121,10.8225707 6.37916371,11.3102634" id="Fill-1" fill="#FFFFFF"></path>
+            </g>
+        </g>
+    </g>
+</svg>

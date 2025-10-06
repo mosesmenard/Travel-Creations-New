@@ -1,0 +1,1 @@
+window.__ENV = {"NEXT_PUBLIC_EXPORT_PACKAGE":"true"};

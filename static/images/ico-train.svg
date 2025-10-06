@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20.003" viewBox="0 0 20 20.003">
+  <g id="Ico-Train" transform="translate(-1405 -1115.997)">
+    <rect id="Rectangle_144" data-name="Rectangle 144" width="20" height="20" transform="translate(1405 1116)" fill="rgba(235,10,253,0)"/>
+    <g id="Group_185" data-name="Group 185" transform="translate(-2768 -1324)">
+      <path id="Subtraction_9" data-name="Subtraction 9" d="M27221.438,10444.762h-10.658a1.782,1.782,0,0,1-1.783-1.776v-11.205a1.786,1.786,0,0,1,1.783-1.783h10.658a1.786,1.786,0,0,1,1.783,1.783v11.205A1.782,1.782,0,0,1,27221.438,10444.762Zm-1.133-4.072a1.155,1.155,0,1,0,1.154,1.154A1.156,1.156,0,0,0,27220.3,10440.689Zm-8.3,0a1.155,1.155,0,1,0,1.146,1.154A1.156,1.156,0,0,0,27212,10440.689Zm-.623-6.921a1,1,0,0,0-1,1v4a1,1,0,0,0,1,1h9.537a1,1,0,0,0,1.006-1v-4a1,1,0,0,0-1.006-1Zm2.459-2.31a.69.69,0,0,0-.689.69.7.7,0,0,0,.689.7h4.619a.694.694,0,0,0,0-1.388Z" transform="translate(-23033 -7990)" fill="#141e6b"/>
+      <g id="Group_171" data-name="Group 171" transform="translate(4176.464 2455.015)">
+        <rect id="Rectangle_139" data-name="Rectangle 139" width="10.614" height="1.384" rx="0.692" transform="translate(1.382 1.674)" fill="#141e6b"/>
+        <rect id="Rectangle_140" data-name="Rectangle 140" width="4.637" height="1.855" rx="0.927" transform="translate(0 4.016) rotate(-60)" fill="#141e6b"/>
+        <rect id="Rectangle_137" data-name="Rectangle 137" width="4.637" height="1.855" rx="0.927" transform="translate(11.592 4.943) rotate(-120)" fill="#141e6b"/>
+      </g>
+    </g>
+  </g>
+</svg>
