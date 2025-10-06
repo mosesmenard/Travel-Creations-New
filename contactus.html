@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Travel Creations for expert travel solutions in Nairobi, Kenya since 1995.">
+    <title>Travel Creations | Contact Us</title>
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+     <link href="./dist/output.css" rel="stylesheet">
+
+<style>
+  html { font-size: 14px; }
+  body { font-family: 'Open Sans', sans-serif; }
+   h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }.header-top-bg { background-color: #1E3A8A; }
+  .header-top-bg { background-color: #1E3A8A; }
+  .header-bg { background-color: #FFFFFF; }
+  .footer-bg { background-color: #1E3A8A; }
+  .sticky { position: sticky; top: 0; z-index: 50; }
+  .submenu { position: absolute; top: 100%; left: 0; background: white; min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); display: none; }
+  .group:hover .submenu { display: block; }
+  .section-block {
+    background: #f9fafb;
+    padding: 1.5rem;
+    border-radius: 6px;
+    position: relative;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    margin-bottom: 2rem;
+  }
+  .section-block::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-width: 0 0 40px 40px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+    filter: drop-shadow(-2px -2px 3px rgba(0,0,0,0.1));
+  }
+  .section-block h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1E3A8A;
+    margin-bottom: 1rem;
+  }
+  .mobile-menu-hidden {transform: translateX(100%);}
+.mobile-menu-visible {transform: translateX(0); }
+</style>
+</head>
+<body class="bg-gray-100">
+
+
+<!-- Top Header -->
+<header class="header-top-bg text-white py-2 text-xs hidden md:block">
+  <div class="container mx-auto px-8 flex flex items-center justify-between">
+    <div class="flex space-x-4">
+      <span>CALL CENTER: +254 (20) 6648000</span>
+      <span>24HRS SUPPORT: +254 722 335 866 / +254 734 600 842</span>
+    </div>
+    <div class="flex space-x-4">
+      <a href="contactus.html" class="hover:underline">CONTACT US:</a>
+      <a href="mailto:reservations@travelcreations.co.ke" class="hover:underline">reservations@travelcreations.co.ke</a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Header -->
+<header class="header-bg text-blue-900 sticky shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-base ">
+    <!-- logo -->
+         <div class="flex items-center space-x-3">
+      <img src="images/logo.jpg" class="max-h-16 max-w-xs" alt="Travel Creations Logo">
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex justify-center items-center space-x-6">
+      <a href="home.html" class="hover:text-orange-500">HOME</a>
+      <div class="relative group">
+        <a href="aboutus.html" class="hover:text-orange-500">ABOUT US</a>
+        <div class="submenu">
+          <a href="partnership.html" class="block px-4 py-2 hover:bg-orange-100">Partnership</a>
+          <a href="services.html" class="block px-4 py-2 hover:bg-orange-100">Our Services</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="corporate-travel.html" class="hover:text-orange-500">CORPORATE TRAVEL</a>
+        <div class="submenu">
+          <a href="missionary-travel.html" class="block px-4 py-2 hover:bg-orange-100">Missionary Travel</a>
+          <a href="faqs-corporate-travel.html" class="block px-4 py-2 hover:bg-orange-100">Corporate Travel FAQs</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="services-leisure-travel.html" class="hover:text-orange-500">LEISURE TRAVEL</a>
+        <div class="submenu">
+          <a href="https://mailchi.mp/travelcreations.co.ke/suggested-safaris" class="block px-4 py-2 hover:bg-orange-100">Suggested Safaris</a>
+          <a href="services-faqs-leisure-travel.html" class="block px-4 py-2 hover:bg-orange-100">Leisure Travel FAQs</a>
+        </div>
+      </div>
+      <a href="services-travel-mice.html" class="hover:text-orange-500">MICE</a>
+      <a href="csr.html" class="hover:text-orange-500">CSR</a>
+      <a href="blog.html" class="hover:text-orange-500">BLOG</a>
+      <a href="https://shop.directpay.online/paymybills/Travelcreations" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">PAY ONLINE</a>
+    </nav>
+    <div class="md:hidden">
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">
+        <div style="width:22px;height:2px;background:#1E3A8A;margin:5px 0"></div>
+        <div style="width:22px;height:2px;background:#1E3A8A;margin:5px 0"></div>
+        <div style="width:22px;height:2px;background:#1E3A8A;margin:5px 0"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+ <div id="mobileMenu" class="fixed top-0 right-0 h-full w-64 bg-white text-blue-900 shadow-lg p-4 z-50 transform translate-x-full transition-transform duration-300 overflow-y-auto">
+  <button class="text-blue-900 mb-4 font-semibold" onclick="toggleMobileMenu(true)">✕ Close</button>
+
+  <a href="home.html" class="block py-2 hover:text-orange-500">HOME</a>
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="aboutus.html" class="block w-full text-left hover:text-orange-500">ABOUT US</a>
+      <button onclick="toggleSubMenu('aboutSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="aboutSubmenu" class="hidden pl-4">
+      <a href="partnership.html" class="block py-2 hover:text-orange-500">Partnership</a>
+      <a href="services.html" class="block py-2 hover:text-orange-500">Our Services</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="corporate-travel.html" class="block w-full text-left hover:text-orange-500">CORPORATE TRAVEL</a>
+      <button onclick="toggleSubMenu('corporateSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="corporateSubmenu" class="hidden pl-4">
+      <a href="corporate-missionary.html" class="block py-2 hover:text-orange-500">Missionary Travel</a>
+      <a href="corporate-faqs.html" class="block py-2 hover:text-orange-500">Corporate Travel FAQs</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="services-leisure-travel.html" class="block w-full text-left hover:text-orange-500">LEISURE TRAVEL</a>
+      <button onclick="toggleSubMenu('leisureSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="leisureSubmenu" class="hidden pl-4">
+      <a href="https://mailchi.mp/travelcreations.co.ke/suggested-safaris" class="block py-2 hover:text-orange-500">Suggested Safaris</a>
+      <a href="services-faqs-leisure-travel.html" class="block py-2 hover:text-orange-500">Leisure Travel FAQs</a>
+    </div>
+  </div>
+
+  <a href="services-travel-mice.html" class="block py-2 hover:text-orange-500">MICE</a>
+  <a href="csr.html" class="block py-2 hover:text-orange-500">CSR</a>
+  <a href="blog.html" class="block py-2 hover:text-orange-500">BLOG</a>
+  <a href="https://shop.directpay.online/paymybills/Travelcreations" class="block py-2 mt-2 bg-orange-500 text-white px-4 rounded hover:bg-orange-600">
+    PAY ONLINE
+  </a>
+</div>
+</header>
+
+<!-- Page Title -->
+<section class="bg-gray-100 py-3 border-b border-gray-200">
+  <div class="container mx-auto max-w-7xl px-4">
+    <h1 class="text-3xl font-bold text-blue-900">Contact Us</h1>
+  </div>
+</section>    
+<!-- Contact Us Section -->
+<section class="py-8 bg-white">
+  <div class="container mx-auto max-w-7xl px-4">
+    <div class="grid grid-cols-1 md:grid-cols-7 gap-6">
+
+      <!-- Contact Information (2/7 width) -->
+      <div class="md:col-span-2 bg-gray-50 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Contact Us</h2>
+        <div class="space-y-4 text-sm">
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Address</h3>
+            <p class="text-gray-700">
+              Travel Creations Limited<br>
+              Shelter Afrique Centre<br>
+              Longonot Road - Upper Hill<br>
+              P.O. Box 14687 - 00800, NAIROBI, KENYA
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Phone</h3>
+            <p class="text-gray-700">
+              Tel: +254 (20) 6648000<br>
+              Mobile: 0734 600842 / 0722 335866
+            </p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold text-gray-800">Email</h3>
+            <p class="text-gray-700">
+              Air Tickets: 
+              <a href="mailto:reservations@travelcreations.co.ke" class="text-orange-500 hover:underline">
+                reservations@travelcreations.co.ke
+              </a><br>
+              Tours Desk: 
+              <a href="mailto:tours@travelcreations.co.ke" class="text-orange-500 hover:underline">
+                tours@travelcreations.co.ke
+              </a><br>
+              Online Booking Tool: 
+              <a href="mailto:ecommerce@travelcreations.co.ke" class="text-orange-500 hover:underline">
+                ecommerce@travelcreations.co.ke
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Form (5/7 width) -->
+      <div class="md:col-span-5 bg-gray-50 p-6 rounded-lg shadow-md">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">We Value Your Feedback</h2>
+        <form id="contactForm" name="contact" method="POST" data-netlify="true" class="space-y-4">
+  <input type="hidden" name="form-name" value="contact">
+  
+  <div>
+    <label for="name" class="block text-gray-700 font-semibold">Your Name</label>
+    <input type="text" id="name" name="name" required class="w-full p-2 border rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Enter your name">
+  </div>
+
+  <div>
+    <label for="email" class="block text-gray-700 font-semibold">Your Email</label>
+    <input type="email" id="email" name="email" required class="w-full p-2 border rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-500" placeholder="Enter your email">
+  </div>
+
+  <div>
+    <label for="message" class="block text-gray-700 font-semibold">Your Message</label>
+    <textarea id="message" name="message" required class="w-full p-2 border rounded text-gray-800 focus:outline-none focus:ring-2 focus:ring-orange-500" rows="4" placeholder="Enter your message"></textarea>
+  </div>
+
+  <button type="submit" class="w-full bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">
+    SEND MESSAGE
+  </button>
+</form>
+
+        <p id="formMessage" class="mt-2 text-center text-green-600 hidden">
+          Thank you! Your message has been sent.
+        </p>
+        <p id="captchaError" class="mt-2 text-center text-red-600 hidden">
+          Please verify you are not a robot.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+     <!-- Footer -->
+<footer class="footer-bg text-white py-8">
+  <div class="container mx-auto max-w-7xl px-4">
+    <!-- Four columns -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/corporate" class="hover:text-orange-500">Corporate Travel</a></li>
+          <li><a href="/leisure" class="hover:text-orange-500">Leisure Travel</a></li>
+          <li><a href="/mice" class="hover:text-orange-500">MICE</a></li>
+          <li><a href="/csr" class="hover:text-orange-500">CSR</a></li>
+          <li><a href="/blog" class="hover:text-orange-500">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Share Your Travel Experience -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Share Your Travel Experience!</h3>
+        <p class="text-sm mb-4">
+          Did you enjoy your last trip? We want to hear about it!  
+          Upload photos, trip itinerary, and more on our Facebook page.
+        </p>
+        <div class="flex space-x-3">
+          <a href="https://x.com/TravelCreation_" aria-label="Follow us on X" class="hover:text-orange-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/travelcreationsltd/" aria-label="Follow us on Facebook" class="hover:text-orange-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/travelcreationsltd/" aria-label="Follow us on Instagram" class="hover:text-orange-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/travelcreationsltd/about/" aria-label="Follow us on LinkedIn" class="hover:text-orange-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.966 0-1.75-.79-1.75-1.75s.784-1.75 1.75-1.75 1.75.79 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.27h-3v-5.5c0-1.38-1.12-2.5-2.5-2.5s-2.5 1.12-2.5 2.5v5.5h-3v-10h3v1.5c.69-1 1.98-1.5 3.5-1.5 2.48 0 4.5 2.02 4.5 4.5v5.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+       <!-- Mailing List -->
+      <div>
+        <h3 class="text-lg font-bold mb-2">Join Our Mailing List</h3>
+        <p class="text-sm mb-1">Get exclusive travel deals and updates!</p>
+        <div id="mc_embed_signup">
+          <form action="https://travelcreations.us11.list-manage.com/subscribe/post?u=10d584ede58dd461646752e74&id=b7b4d105f2" 
+                method="post" target="_blank" 
+                class="flex flex-col space-y-1">
+            <input type="email" name="EMAIL" placeholder="Email Address" required class="p-2 text-sm text-black rounded">
+            <input type="text" name="FNAME" placeholder="First Name" required class="p-2 text-sm text-black rounded">
+            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-blue-900 font-bold py-2 rounded text-sm">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+      
+      <!-- Contact Us -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+        <p class="text-sm">Call Center: +254 (20) 6648000</p>
+        <p class="text-sm">Emergencies 24HRS: +254 722 335 866 / +254 734 600 842</p>
+        <p class="text-sm mt-2">
+          Email: <a href="mailto:reservations@travelcreations.co.ke" class="hover:text-orange-500">
+            reservations@travelcreations.co.ke
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 text-center text-sm border-t border-white/20 pt-4">
+      © 2025 Travel Creations Ltd. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  /* ========== Mobile Menu Toggle ========== */
+  function toggleMobileMenu() {
+    const menu = document.getElementById("mobileMenu");
+    menu.classList.toggle("mobile-menu-visible");
+    menu.classList.toggle("mobile-menu-hidden");
+
+    // Optional: lock body scroll when menu is open
+    if (menu.classList.contains("mobile-menu-visible")) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+  }
+  window.toggleMobileMenu = toggleMobileMenu;
+
+  function toggleSubMenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle("submenu-open");
+    submenu.classList.toggle("hidden");
+  }
+  window.toggleSubMenu = toggleSubMenu;
+
+  /* ========== Newsletter Form ========== */
+  const newsletterForm = document.getElementById("newsletterForm");
+  if (newsletterForm) {
+    newsletterForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      alert("Thank you for subscribing! Check your email for updates and offers.");
+    });
+  }
+
+  /* ========== Slider with Dots ========== */
+  let currentSlide = 0;
+  const slides = document.querySelectorAll(".slide");
+  const totalSlides = slides.length;
+  const dotsContainer = document.querySelector(".slider-dots");
+
+  if (dotsContainer && slides.length > 0) {
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.addEventListener("click", () => {
+        currentSlide = i;
+        showSlide(currentSlide);
+        resetAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  const dots = dotsContainer ? dotsContainer.querySelectorAll("button") : [];
+
+  function showSlide(index) {
+    slides.forEach((s, i) => s.classList.toggle("active", i === index));
+    dots.forEach((d, i) => d.classList.toggle("active", i === index));
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+    showSlide(currentSlide);
+  }
+
+  const prevBtn = document.querySelector(".slider-btn.prev");
+  const nextBtn = document.querySelector(".slider-btn.next");
+  if (prevBtn) prevBtn.onclick = () => { changeSlide(-1); resetAutoSlide(); };
+  if (nextBtn) nextBtn.onclick = () => { changeSlide(1); resetAutoSlide(); };
+
+  let autoSlide = setInterval(() => changeSlide(1), 5000);
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => changeSlide(1), 5000);
+  }
+
+  if (slides.length > 0) showSlide(currentSlide);
+});
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const formData = new FormData(this);
+
+  const response = await fetch('contact.php', {
+    method: 'POST',
+    body: formData
+  });
+
+  const text = await response.text();
+  if (text.trim() === 'success') {
+    document.getElementById('formMessage').classList.remove('hidden');
+    this.reset();
+  } else {
+    alert('There was a problem sending your message. Please try again.');
+  }
+});
+ // Close mobile menu when resizing to desktop
+window.addEventListener('resize', function() {
+  const menu = document.getElementById('mobileMenu');
+  if (window.innerWidth >= 768) {
+    menu.classList.remove('mobile-menu-visible');
+    menu.classList.add('mobile-menu-hidden');
+    document.body.style.overflow = ""; // restore scrolling
+  }
+});
+</script>
+</body>
+</html>

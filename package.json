@@ -1,0 +1,21 @@
+{
+       "name": "my-project",
+       "version": "1.0.0",
+       "scripts": {
+         "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+         "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+       },
+       "dependencies": {
+         "autoprefixer": "^10.4.21",
+         "postcss": "^8.5.6"
+       },
+       "description": "",
+       "main": "index.js",
+       "keywords": [],
+       "author": "",
+       "license": "ISC",
+       "devDependencies": {
+         "tailwindcss": "^3.4.0"
+       },
+       "type": "commonjs"
+     }

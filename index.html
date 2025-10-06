@@ -1,0 +1,687 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Travel Creations - Your premier travel agency in Nairobi, Kenya for corporate and leisure travel">
+<title>Travel Creations | Imagine it we create it</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<link href="./dist/output.css" rel="stylesheet">
+
+<style>
+  
+  html {
+    font-size: 14px; /* Default is usually 16px; reduce slightly for the whole page */
+}
+  body { font-family: 'Open Sans', sans-serif; font-size: 0.85rem;}
+  h1,h2,h3 { font-family: 'Montserrat', sans-serif; }
+
+  .header-top-bg { background-color: #1E3A8A; }
+  .header-bg { background-color: #FFFFFF; }
+  .footer-bg { background-color: #1E3A8A; }
+
+  .hero-bg {
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+  }
+
+  .sticky { position: sticky; top: 0; z-index: 50; }
+
+  .hamburger div { width: 25px; height: 3px; background-color: #FFFFFF; margin: 5px 0; transition: all 0.3s ease; }
+
+  .error-message { display: none; color: #DC2626; font-size: 0.875rem; }
+  .error-message.active { display: block; }
+
+
+  /* Desktop submenu */
+  .group { position: relative; }
+  .group .submenu {
+    position: absolute; top: 100%; left: 0; background-color: white; color: #1E3A8A;
+    min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease;
+    z-index: 1000; margin-top: 0.25rem;
+  }
+  .submenu-visible { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
+  
+  /* Mobile submenu */
+  @media (max-width: 768px) {
+    .submenu { display: none; position: static; opacity: 1 !important; pointer-events: auto !important; box-shadow: none; }
+    .submenu-open { display: block !important; }
+    .hero-bg { background-attachment: scroll; }
+  }
+</style>
+</head>
+<body class="bg-gray-100">
+
+<!-- Top Header -->
+<header class="header-top-bg text-white py-2 text-xs hidden md:block">
+  <div class="container mx-auto px-8 flex flex items-center justify-between">
+    <div class="flex space-x-4">
+      <span>CALL CENTER: +254 (20) 6648000</span>
+      <span>24HRS SUPPORT: +254 722 335 866 / +254 734 600 842</span>
+    </div>
+    <div class="flex space-x-4">
+      <a href="contactus.html" class="hover:underline">CONTACT US:</a>
+      <a href="mailto:reservations@travelcreations.co.ke" class="hover:underline">reservations@travelcreations.co.ke</a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Header -->
+<header class="header-bg text-blue-900 sticky shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-base">
+    <div class="flex items-center space-x-3">
+      <img src="images/logo.jpg" class="max-h-16 max-w-xs" alt="Travel Creations Logo">
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex justify-center items-center space-x-6">
+      <a href="home.html" class="hover:text-orange-500">HOME</a>
+
+      <!-- Dropdowns -->
+      <div class="relative group">
+        <a href="aboutus.html" class="hover:text-orange-500" aria-expanded="false">ABOUT US</a>
+        <div class="submenu">
+          <a href="partnership.html" class="block px-4 py-2 hover:bg-orange-100">Partnership</a>
+          <a href="services.html" class="block px-4 py-2 hover:bg-orange-100">Our Services</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <a href="corporate-travel.html" class="hover:text-orange-500" aria-expanded="false">CORPORATE TRAVEL</a>
+        <div class="submenu">
+          <a href="missionary-travel.html" class="block px-4 py-2 hover:bg-orange-100">Missionary Travel</a>
+          <a href="faqs-corporate-travel.html" class="block px-4 py-2 hover:bg-orange-100">Corporate Travel FAQs</a>
+        </div>
+      </div>
+
+      <div class="relative group">
+        <a href="services-leisure-travel.html" class="hover:text-orange-500" aria-expanded="false">LEISURE TRAVEL</a>
+        <div class="submenu">
+          <a href="https://mailchi.mp/travelcreations.co.ke/suggested-safaris" class="block px-4 py-2 hover:bg-orange-100">Suggested Safaris</a>
+          <a href="services-faqs-leisure-travel.html" class="block px-4 py-2 hover:bg-orange-100">Leisure Travel FAQs</a>
+        </div>
+      </div>
+
+      <a href="services-travel-mice.html" class="hover:text-orange-500">MICE</a>
+      <a href="csr.html" class="hover:text-orange-500">CSR</a>
+      <a href="blog.html" class="hover:text-orange-500">BLOG</a>
+      <a href="https://shop.directpay.online/paymybills/Travelcreations" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">PAY ONLINE</a>
+    </nav>
+
+    <!-- Mobile Hamburger -->
+    <div class="md:hidden">
+      <button class="space-y-1 focus:outline-none" onclick="toggleMobileMenu()">
+        <div class="w-6 h-0.5 bg-blue-900"></div>
+        <div class="w-6 h-0.5 bg-blue-900"></div>
+        <div class="w-6 h-0.5 bg-blue-900"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+<div id="mobileMenu" class="mobile-menu hidden md:hidden bg-white text-blue-900 fixed top-0 right-0 h-full w-64 shadow-lg p-4 z-50 overflow-y-auto">
+  <button class="text-blue-900 mb-4 font-semibold" onclick="toggleMobileMenu(true)">✕ Close</button>
+
+  <a href="home.html" class="block py-2 hover:text-orange-500">HOME</a>
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="aboutus.html" class="block w-full text-left hover:text-orange-500">ABOUT US</a>
+      <button onclick="toggleSubMenu('aboutSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="aboutSubmenu" class="hidden pl-4">
+      <a href="partnership.html" class="block py-2 hover:text-orange-500">Partnership</a>
+      <a href="services.html" class="block py-2 hover:text-orange-500">Our Services</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="corporate-travel.html" class="block w-full text-left hover:text-orange-500">CORPORATE TRAVEL</a>
+      <button onclick="toggleSubMenu('corporateSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="corporateSubmenu" class="hidden pl-4">
+      <a href="corporate-missionary.html" class="block py-2 hover:text-orange-500">Missionary Travel</a>
+      <a href="corporate-faqs.html" class="block py-2 hover:text-orange-500">FAQs</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="services-leisure-travel.html" class="block w-full text-left hover:text-orange-500">LEISURE TRAVEL</a>
+      <button onclick="toggleSubMenu('leisureSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="leisureSubmenu" class="hidden pl-4">
+      <a href="https://mailchi.mp/travelcreations.co.ke/suggested-safaris" class="block py-2 hover:text-orange-500">Suggested Safaris</a>
+      <a href="services-faqs-leisure-travel.html" class="block py-2 hover:text-orange-500">FAQs</a>
+    </div>
+  </div>
+
+  <a href="services-travel-mice.html" class="block py-2 hover:text-orange-500">MICE</a>
+  <a href="csr.html" class="block py-2 hover:text-orange-500">CSR</a>
+  <a href="blog.html" class="block py-2 hover:text-orange-500">BLOG</a>
+  <a href="https://shop.directpay.online/paymybills/Travelcreations" class="block py-2 mt-2 bg-orange-500 text-white px-4 rounded hover:bg-orange-600">
+    PAY ONLINE
+  </a>
+</div>
+</header>
+
+    <!-- Hero Section -->
+  <section class="relative h-screen overflow-hidden text-white">
+  <!-- Slides -->
+  <div id="heroSlider" class="absolute inset-0">
+    <!-- Slide 1 -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000"
+         style="background-image: url('images/hero.jpg');">
+      <!-- Light overlay -->
+      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div class="relative h-full w-full flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">You Imagine It, We Create It!</h1>
+        <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">Unforgettable safaris, seamless corporate travel, and tailored MICE experiences in Kenya and beyond.</p>
+        <a href="#booking-form" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold">Plan Your Trip Now</a>
+      </div>
+    </div>
+    <!-- Slide 2 -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
+         style="background-image: url('images/hero2.jpg');">
+      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div class="relative h-full w-full flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore the Wild Beauty</h1>
+        <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">Experience Kenya’s breathtaking safaris and adventures.</p>
+        <a href="#booking-form" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold">Start Exploring</a>
+      </div>
+    </div>
+    <!-- Slide 3 -->
+    <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
+         style="background-image: url('images/hero3.jpg');">
+      <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+      <div class="relative h-full w-full flex flex-col justify-center items-center text-center px-4">
+        <h1 class="text-4xl md:text-6xl font-bold mb-4">Seamless Corporate Travel</h1>
+        <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">Tailored solutions for business trips and conferences.</p>
+        <a href="#booking-form" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold">Book Today</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Slider Controls (dots) -->
+  <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex space-x-3 z-20">
+    <button class="w-3 h-3 rounded-full bg-white opacity-70 hover:opacity-100" onclick="goToSlide(0)"></button>
+    <button class="w-3 h-3 rounded-full bg-white opacity-70 hover:opacity-100" onclick="goToSlide(1)"></button>
+    <button class="w-3 h-3 rounded-full bg-white opacity-70 hover:opacity-100" onclick="goToSlide(2)"></button>
+  </div>
+</section>
+
+    <!-- Flight Search Form Section -->
+    <section id="booking-form" class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-blue-900 mb-8">Find Your Perfect Flight</h2>
+            <div class="max-w-4xl mx-auto bg-gray-50 p-6 rounded-lg shadow-lg">
+                <form id="flightSearchForm" class="space-y-4">
+                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                        <div class="flex-1">
+                            <label for="destination" class="block text-sm font-medium text-gray-700">Destination</label>
+                            <input type="text" id="destination" placeholder="e.g., Nairobi, Maasai Mara, Dubai" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500" aria-required="true" required>
+                        </div>
+                        <div class="flex-1">
+                            <label for="departure-date" class="block text-sm font-medium text-gray-700">Departure Date</label>
+                            <input type="date" id="departure-date" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500" aria-required="true" required>
+                        </div>
+                        <div class="flex-1">
+                            <label for="return-date" class="block text-sm font-medium text-gray-700">Return Date</label>
+                            <input type="date" id="return-date" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                        <div class="flex-1">
+                            <label for="date-variants" class="block text-sm font-medium text-gray-700">Date Flexibility</label>
+                            <select id="date-variants" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="exact">Exact Dates</option>
+                                <option value="plus-minus-1">+/- 1 Day</option>
+                                <option value="plus-minus-2">+/- 2 Days</option>
+                                <option value="plus-minus-3">+/- 3 Days</option>
+                                <option value="weekends">Prolonged Weekends</option>
+                            </select>
+                        </div>
+                        <div class="flex-1">
+                            <label for="airline" class="block text-sm font-medium text-gray-700">Preferred Airline</label>
+                            <input type="text" id="airline" placeholder="e.g., Kenya Airways" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                        </div>
+                        <div class="flex-1">
+                            <label for="search-type" class="block text-sm font-medium text-gray-700">Search By</label>
+                            <select id="search-type" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="schedule">Based on Schedule</option>
+                                <option value="price">Based on Total Price</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
+                        <div class="flex-1">
+                            <label for="class" class="block text-sm font-medium text-gray-700">Class</label>
+                            <select id="class" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="economy">Economy</option>
+                                <option value="premium-economy">Premium Economy</option>
+                                <option value="business">Business</option>
+                            </select>
+                        </div>
+                        <div class="flex-1">
+                            <label for="transfers" class="block text-sm font-medium text-gray-700">Flight Type</label>
+                            <select id="transfers" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="transfers">Including Transfers</option>
+                                <option value="direct">Only Direct Flights</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+                        <div>
+                            <label for="adults" class="block text-sm font-medium text-gray-700">Adults</label>
+                            <select id="adults" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="0">0</option>
+                                <option value="1" selected>1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="infants" class="block text-sm font-medium text-gray-700">Infants (0-2)</label>
+                            <select id="infants" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="children" class="block text-sm font-medium text-gray-700">Children (2-11)</label>
+                            <select id="children" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="youth" class="block text-sm font-medium text-gray-700">Youth (12-24)</label>
+                            <select id="youth" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="seniors" class="block text-sm font-medium text-gray-700">Seniors (60+)</label>
+                            <select id="seniors" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-orange-500">
+                                <option value="0" selected>0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div id="errorMessages" class="space-y-2">
+                        <p id="infantError" class="error-message">Infants cannot travel without company.</p>
+                        <p id="childError" class="error-message">Children cannot travel alone.</p>
+                        <p id="travelerTypeError" class="error-message">Maximum count of traveler types is 4.</p>
+                        <p id="minTravelerError" class="error-message">You have to choose at least one traveler.</p>
+                        <p id="maxTravelerError" class="error-message">Maximum count of travelers is 9.</p>
+                    </div>
+					<button type="submit" class="search-button w-full bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold" aria-label="Search Flights">Search Flights</button>
+            
+                <p class="text-sm text-gray-600 mt-4 text-center">Secure booking with PCI DSS compliance. Powered by GOLIBE.</p>
+            </div>
+        </div>
+    </section>
+
+   <!-- Four Column Info Section -->
+<section class="py-12 bg-white">
+  <div class="container mx-auto max-w-7xl px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+      
+      <!-- Box 1 -->
+      <div class="bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+        <div class="relative overflow-hidden rounded-t-lg">
+          <img src="images/homepage1.jpg" alt="Welcome" class="w-full h-32 object-cover transition duration-500 ease-in-out">
+          <!-- Orange Blur Overlay -->
+          <div class="absolute inset-0 bg-orange-300 bg-opacity-50 blur-sm transition duration-500 ease-in-out hover:bg-opacity-0"></div>
+        </div>
+        <div class="p-4">
+          <h4 class="text-lg font-semibold mb-2 text-blue-900">
+            <a href="aboutus" class="hover:text-orange-500">Welcome</a>
+          </h4>
+          <p class="text-sm text-gray-600">
+           Your trusted travel partner in Nairobi, Kenya. 
+           Our experienced team delivers seamless corporate, leisure, and MICE travel with professionalism and care.
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 2 -->
+      <div class="bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+        <div class="relative overflow-hidden rounded-t-lg">
+          <img src="images/homepage3.jpg" alt="Travel Insurance" class="w-full h-32 object-cover transition duration-500 ease-in-out">
+          <div class="absolute inset-0 bg-orange-300 bg-opacity-50 blur-sm transition duration-500 ease-in-out hover:bg-opacity-0"></div>
+        </div>
+        <div class="p-4">
+          <h4 class="text-lg font-semibold mb-2 text-blue-900">
+            <a href="services" class="hover:text-orange-500">Travel Management</a>
+          </h4>
+          <p class="text-sm text-gray-600">
+           At Travel Creations, we simplify corporate and leisure travel. From flights and accommodations to MICE and ground transport, our expert team ensures every trip is seamless, efficient, and tailored to your needs.
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 3 -->
+      <div class="bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+        <div class="relative overflow-hidden rounded-t-lg">
+          <img src="images/homepage2.jpg" alt="Our CSR" class="w-full h-32 object-cover transition duration-500 ease-in-out">
+          <div class="absolute inset-0 bg-orange-300 bg-opacity-50 blur-sm transition duration-500 ease-in-out hover:bg-opacity-0"></div>
+        </div>
+        <div class="p-4">
+          <h4 class="text-lg font-semibold mb-2 text-blue-900">
+            <a href="csr" class="hover:text-orange-500">CSR</a>
+          </h4>
+          <p class="text-sm text-gray-600">
+            Our Corporate Social Responsibility Program has been an integral part of our business. Giving back to our communities is a great way to support those who support us.
+          </p>
+        </div>
+      </div>
+
+      <!-- Box 4 -->
+      <div class="bg-gray-50 rounded-lg shadow hover:shadow-lg transition">
+        <div class="relative overflow-hidden rounded-t-lg">
+          <img src="images/homepage4.jpg" alt="Need Help?" class="w-full h-32 object-cover transition duration-500 ease-in-out">
+          <div class="absolute inset-0 bg-orange-300 bg-opacity-50 blur-sm transition duration-500 ease-in-out hover:bg-opacity-0"></div>
+        </div>
+        <div class="p-4">
+          <h4 class="text-lg font-semibold mb-2 text-blue-900">
+            <a href="contactus" class="hover:text-orange-500">Need Help?</a>
+          </h4>
+          <p class="text-sm text-gray-600">
+            We’re ready to help you plan your next trip. Our certified agents are available:
+            <br>Mon–Fri: 8am – 5pm
+            <br>Sat: 9am – 12noon
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PCI DSS Compliance Section -->
+<section class="py-12 bg-gray-100">
+  <div class="container max-w-7xl px-4 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold text-blue-900 mb-4">Data Security Standard</h2>
+    <div class="max-w-3xl mx-auto">
+      <p class="text-gray-700 mb-6 text-base">
+        We accept all major credit cards for flight bookings and related services. 
+        To ensure your transactions are safe, we comply with the 
+        <span class="font-semibold">Payment Card Industry Data Security Standard (PCI DSS)</span> — 
+        a global framework that safeguards sensitive cardholder data.
+      </p>
+      <p class="text-gray-700 mb-6 text-base">
+        PCI DSS compliance means our booking systems, payment gateways, and processes 
+        are built to prevent data breaches, reduce fraud, and give you confidence that 
+        your personal and financial information is handled securely at every step.
+      </p>
+      <div class="flex justify-center">
+        <img src="images/pci-logo.png" alt="PCI Compliance" class="h-20 w-auto">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Footer Section -->
+<footer class="footer-bg text-white py-8">
+  <div class="container mx-auto max-w-7xl px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-6"> <!-- reduced gap -->
+      
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold mb-2">Quick Links</h3> <!-- reduced mb -->
+        <ul class="space-y-1 text-sm"> <!-- reduced spacing -->
+          <li><a href="missionary-travel.html" class="hover:text-orange-500">Missionary Travel</a></li>
+          <li><a href="services.html" class="hover:text-orange-500">Our Services</a></li>
+          <li><a href="partnership.html" class="hover:text-orange-500">Our Partnership</a></li>
+          <li><a href="termsandconditions.html" class="hover:text-orange-500">Terms & Conditions</a></li>
+          <li><a href="privacy_statement.html" class="hover:text-orange-500">Privacy Statement</a></li>
+        </ul>
+      </div>
+
+      <!-- Latest News -->
+      <div>
+        <h3 class="text-lg font-bold mb-2">Latest News</h3>
+        <ul class="space-y-1 text-sm" id="latest-news"></ul>
+      </div>
+
+      <!-- Contact Us -->
+      <div>
+        <h3 class="text-lg font-bold mb-2">Contact Us</h3>
+        <p class="text-sm">Call Center: +254 (20) 6648000</p>
+        <p class="text-sm">Emergencies 24HRS: +254 722 335 866 / +254 734 600 842</p>
+        <p class="text-sm mt-1">Email: 
+          <a href="mailto:reservations@travelcreations.co.ke" class="hover:text-orange-500">reservations@travelcreations.co.ke</a>
+        </p>
+        <p class="text-sm mt-1">Mon-Fri: 8am-5pm | Sat: 9am-12noon</p>
+      </div>
+
+      <!-- Mailing List -->
+      <div>
+        <h3 class="text-lg font-bold mb-2">Join Our Mailing List</h3>
+        <p class="text-sm mb-1">Get exclusive travel deals and updates!</p>
+        <div id="mc_embed_signup">
+          <form action="https://travelcreations.us11.list-manage.com/subscribe/post?u=10d584ede58dd461646752e74&id=b7b4d105f2" 
+                method="post" target="_blank" 
+                class="flex flex-col space-y-1">
+            <input type="email" name="EMAIL" placeholder="Email Address" required class="p-2 text-sm text-black rounded">
+            <input type="text" name="FNAME" placeholder="First Name" required class="p-2 text-sm text-black rounded">
+            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-blue-900 font-bold py-2 rounded text-sm">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Social Icons -->
+     <div class="mt-4 flex justify-center space-x-3">
+      <a href="https://x.com/TravelCreation_" aria-label="Follow us on X" class="text-white hover:text-orange-500">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
+      <a href="https://www.facebook.com/travelcreationsltd/" aria-label="Follow us on Facebook" class="text-white hover:text-orange-500">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+      </a>
+      <a href="https://www.instagram.com/travelcreationsltd/" aria-label="Follow us on Instagram" class="text-white hover:text-orange-500">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.948-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      </a>
+      <!-- LinkedIn Icon -->
+    <a href="https://www.linkedin.com/company/travelcreationsltd/about/" aria-label="Follow us on LinkedIn" class="hover:text-orange-500">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.966 0-1.75-.79-1.75-1.75s.784-1.75 1.75-1.75 1.75.79 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.27h-3v-5.5c0-1.38-1.12-2.5-2.5-2.5s-2.5 1.12-2.5 2.5v5.5h-3v-10h3v1.5c.69-1 1.98-1.5 3.5-1.5 2.48 0 4.5 2.02 4.5 4.5v5.5z"/>
+        </svg>
+    </a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-2 text-center text-sm"> <!-- reduced mt -->
+      © 2025 Travel Creations Ltd. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+
+<script>
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('#heroSlider > div');
+  const totalSlides = slides.length;
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = i === index ? '1' : '0';
+    });
+    currentSlide = index;
+  }
+
+  function nextSlide() {
+    let next = (currentSlide + 1) % totalSlides;
+    showSlide(next);
+  }
+
+  function goToSlide(index) {
+    showSlide(index);
+  }
+
+  // Auto slide every 6s
+  setInterval(nextSlide, 6000);
+
+  // Init
+  showSlide(0);
+</script>
+    <script>
+    function toggleMobileMenu(forceClose = false) {
+        const menu = document.getElementById('mobileMenu');
+
+        if (forceClose) {
+            // Always hide menu
+            menu.classList.add('mobile-menu-hidden');
+        } else {
+            // Toggle menu
+            menu.classList.toggle('mobile-menu-hidden');
+        }
+    }
+
+    function toggleSubMenu(id) {
+        const submenu = document.getElementById(id);
+        submenu.classList.toggle('submenu-open');
+        submenu.classList.toggle('hidden');
+    }
+
+    // Close menu when any link inside it is clicked
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => toggleMobileMenu(true));
+    });
+
+    // Flight Search Validation
+    document.getElementById('flightSearchForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        // Reset error messages
+        document.querySelectorAll('.error-message').forEach(el => el.classList.remove('active'));
+
+        const adults = parseInt(document.getElementById('adults').value);
+        const infants = parseInt(document.getElementById('infants').value);
+        const children = parseInt(document.getElementById('children').value);
+        const youth = parseInt(document.getElementById('youth').value);
+        const seniors = parseInt(document.getElementById('seniors').value);
+        const totalTravelers = adults + infants + children + youth + seniors;
+        const travelerTypes = [adults, infants, children, youth, seniors].filter(num => num > 0).length;
+
+        let valid = true;
+        if (infants > 0 && adults === 0) {
+            document.getElementById('infantError').classList.add('active');
+            valid = false;
+        }
+        if (children > 0 && adults === 0) {
+            document.getElementById('childError').classList.add('active');
+            valid = false;
+        }
+        if (travelerTypes > 4) {
+            document.getElementById('travelerTypeError').classList.add('active');
+            valid = false;
+        }
+        if (totalTravelers === 0) {
+            document.getElementById('minTravelerError').classList.add('active');
+            valid = false;
+        }
+        if (totalTravelers > 9) {
+            document.getElementById('maxTravelerError').classList.add('active');
+            valid = false;
+        }
+
+        if (valid) {
+            alert('Searching for your flight...'); // Placeholder for booking engine API call
+        }
+    });
+
+    // Newsletter placeholder fix
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+        newsletterForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for subscribing! Check your email for a 5% off voucher.');
+        });
+    }
+</script>
+<script>
+  // Toggle main mobile menu
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+
+  // Toggle mobile submenus
+  function toggleSubMenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle('submenu-open');
+
+    // Toggle aria-expanded for accessibility
+    const button = submenu.previousElementSibling;
+    if(button.getAttribute('aria-expanded') === 'true') {
+      button.setAttribute('aria-expanded', 'false');
+    } else {
+      button.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+  // Desktop dropdown hover effect
+  document.querySelectorAll('.group').forEach(item => {
+    item.addEventListener('mouseenter', () => {
+      const submenu = item.querySelector('.submenu');
+      submenu.classList.add('submenu-visible');
+    });
+    item.addEventListener('mouseleave', () => {
+      const submenu = item.querySelector('.submenu');
+      submenu.classList.remove('submenu-visible');
+    });
+  });
+</script>
+</body>
+</html>

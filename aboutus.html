@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel Creations - Learn about our story, mission, team, and partnerships in Nairobi, Kenya">
+  <title>Travel Creations | About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet">
+  <style>
+    html { font-size: 14px; }
+    body { font-family: 'Open Sans', sans-serif; }
+    h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }
+    .header-top-bg { background-color: #1E3A8A; }
+    .header-bg { background-color: #FFFFFF; }
+    .footer-bg { background-color: #1E3A8A; }
+    .sticky { position: sticky; top: 0; z-index: 50; }
+    .hamburger div { width: 25px; height: 3px; background-color: #FFFFFF; margin: 5px 0; transition: all 0.3s ease; }
+    .submenu { position: absolute; top: 100%; left: 0; background: white; min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); display: none; }
+    .group:hover .submenu { display: block; }
+    .slider { position: relative; overflow: hidden; height: 300px; }
+    .slide { position: absolute; inset:0; opacity:0; transition: opacity 0.5s ease-in-out; display:flex; align-items:center; justify-content:center; padding:20px; box-sizing:border-box; }
+    .slide.active { opacity:1; }
+    .slider-btn { position:absolute; top:50%; transform:translateY(-50%); background: rgba(30,58,138,0.8); color:white; padding:8px 12px; cursor:pointer; z-index:10; }
+    .slider-btn.prev{ left:10px }
+    .slider-btn.next{ right:10px }
+    @media (max-width:768px) {.submenu { display: none; position: static; opacity: 1 !important; pointer-events: auto !important; box-shadow: none; }
+    .submenu-open { display: block !important; }}
+  </style>
+</head>
+<body class="bg-gray-100">
+
+<!-- Top Header -->
+<header class="header-top-bg text-white py-2 text-xs shadow-lg hidden md:block">
+  <div class="container mx-auto px-8 flex items-center justify-between">
+    <div class="flex space-x-4">
+      <span>CALL CENTER: +254 (20) 6648000</span>
+      <span>24HRS SUPPORT: +254 722 335 866 / +254 734 600 842</span>
+    </div>
+    <div class="flex space-x-4">
+      <a href="contactus.html" class="hover:underline">CONTACT US:</a>
+      <a href="mailto:reservations@travelcreations.co.ke" class="hover:underline">reservations@travelcreations.co.ke</a>
+    </div>
+  </div>
+</header>
+
+<!-- Main Header -->
+<header class="header-bg text-blue-900 sticky shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 py-2 flex items-center justify-between text-base ">
+    <!-- logo -->
+         <div class="flex items-center space-x-3">
+      <img src="images/logo.jpg" class="max-h-16 max-w-xs" alt="Travel Creations Logo">
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex justify-center items-center space-x-6">
+      <a href="home.html" class="hover:text-orange-500">HOME</a>
+      <div class="relative group">
+        <a href="aboutus.html" class="hover:text-orange-500">ABOUT US</a>
+        <div class="submenu">
+          <a href="partnership.html" class="block px-4 py-2 hover:bg-orange-100">Partnership</a>
+          <a href="services.html" class="block px-4 py-2 hover:bg-orange-100">Our Services</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="corporate-travel.html" class="hover:text-orange-500">CORPORATE TRAVEL</a>
+        <div class="submenu">
+          <a href="missionary-travel.html" class="block px-4 py-2 hover:bg-orange-100">Missionary Travel</a>
+          <a href="faqs-corporate-travel.html" class="block px-4 py-2 hover:bg-orange-100">Corporate Travel FAQs</a>
+        </div>
+      </div>
+      <div class="relative group">
+        <a href="services-leisure-travel.html" class="hover:text-orange-500">LEISURE TRAVEL</a>
+        <div class="submenu">
+          <a href="https://mailchi.mp/travelcreations.co.ke/suggested-safaris" class="block px-4 py-2 hover:bg-orange-100">Suggested Safaris</a>
+          <a href="services-faqs-leisure-travel.html" class="block px-4 py-2 hover:bg-orange-100">Leisure Travel FAQs</a>
+        </div>
+      </div>
+      <a href="services-travel-mice.html" class="hover:text-orange-500">MICE</a>
+      <a href="csr.html" class="hover:text-orange-500">CSR</a>
+      <a href="blog.html" class="hover:text-orange-500">BLOG</a>
+      <a href="https://shop.directpay.online/paymybills/Travelcreations" class="bg-orange-500 text-white px-4 py-2 rounded hover:bg-orange-600">PAY ONLINE</a>
+    </nav>
+    <div class="md:hidden">
+      <button class="hamburger" aria-label="Open menu" onclick="toggleMobileMenu()">
+        <div style="width:22px;height:2px;background:#1E3A8A;margin:5px 0"></div>
+        <div style="width:22px;height:2px;background:#1E3A8A;margin:5px 0"></div>
+        <div style="width:22px;height:2px;background:#1E3A8A;margin:5px 0"></div>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+ <div id="mobileMenu" class="mobile-menu hidden md:hidden bg-white text-blue-900 fixed top-0 right-0 h-full w-64 shadow-lg p-4 z-50 overflow-y-auto">
+  <button class="text-blue-900 mb-4 font-semibold" onclick="toggleMobileMenu(true)">✕ Close</button>
+
+  <a href="home.html" class="block py-2 hover:text-orange-500">HOME</a>
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="aboutus.html" class="block w-full text-left hover:text-orange-500">ABOUT US</a>
+      <button onclick="toggleSubMenu('aboutSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="aboutSubmenu" class="hidden pl-4">
+      <a href="partnership.html" class="block py-2 hover:text-orange-500">Partnership</a>
+      <a href="services.html" class="block py-2 hover:text-orange-500">Our Services</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="corporate-travel.html" class="block w-full text-left hover:text-orange-500">CORPORATE TRAVEL</a>
+      <button onclick="toggleSubMenu('corporateSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="corporateSubmenu" class="hidden pl-4">
+      <a href="corporate-missionary.html" class="block py-2 hover:text-orange-500">Missionary Travel</a>
+      <a href="corporate-faqs.html" class="block py-2 hover:text-orange-500">Corporate Travel FAQs</a>
+    </div>
+  </div>
+
+  <div>
+    <div class="flex items-center justify-between py-2">
+      <a href="services-leisure-travel.html" class="block w-full text-left hover:text-orange-500">LEISURE TRAVEL</a>
+      <button onclick="toggleSubMenu('leisureSubmenu')" aria-expanded="false" class="px-2 hover:text-orange-500">▼</button>
+    </div>
+    <div id="leisureSubmenu" class="hidden pl-4">
+      <a href="https://mailchi.mp/travelcreations.co.ke/suggested-safaris" class="block py-2 hover:text-orange-500">Suggested Safaris</a>
+      <a href="services-faqs-leisure-travel.html" class="block py-2 hover:text-orange-500">Leisure Travel FAQs</a>
+    </div>
+  </div>
+
+  <a href="services-travel-mice.html" class="block py-2 hover:text-orange-500">MICE</a>
+  <a href="csr.html" class="block py-2 hover:text-orange-500">CSR</a>
+  <a href="blog.html" class="block py-2 hover:text-orange-500">BLOG</a>
+  <a href="https://shop.directpay.online/paymybills/Travelcreations" class="block py-2 mt-2 bg-orange-500 text-white px-4 rounded hover:bg-orange-600">
+    PAY ONLINE
+  </a>
+</div>
+</header>
+
+<!-- About Us Content -->
+ <section class="bg-gray-100 py-3 border-b border-gray-200">
+  <div class="container mx-auto max-w-7xl px-4">
+    <h1 class="text-3xl font-bold text-blue-900">About Us</h1>
+  </div>
+</section>
+
+<section class="py-8 bg-white">
+  <div class="container mx-auto max-w-7xl px-4">
+   
+    <!-- Story -->
+    <div class="mb-8 flex flex-col md:flex-row items-center gap-6">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Story</h2>
+         <p class="text-gray-700 text-base leading-relaxed">Founded in 1995 in Nairobi, Kenya, Travel Creations has grown 
+            from a small travel agency into a trusted name in both corporate and leisure travel. 
+            With a passion for exploring the world and a commitment to exceptional service, we’ve 
+            built a reputation for delivering personalized travel solutions tailored to our clients’ 
+            needs. Over the past three decades, 
+            we’ve served thousands of travelers, blending local expertise with global reach.</p>
+      </div>
+      <img src="images/ourstory.jpg"
+      alt="Our Story - Airplane takeoff View" 
+     class="md:w-1/2 h-64 object-cover rounded-lg shadow">
+    </div>
+
+    <!-- Mission -->
+    <div class="mb-8 flex flex-col md:flex-row-reverse items-center gap-6">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Mission</h2>
+        <p class="text-gray-700 text-base leading-relaxed">Our mission is to transform travel into seamless, memorable experiences. We strive to provide innovative solutions, competitive pricing, 
+            and unparalleled support, ensuring every journey—whether for business or pleasure—exceeds expectations. Our dedication to sustainability and community impact 
+            drives us to create a positive footprint wherever we go.</p>
+      </div>
+      <img src="images/mission.jpg" alt="Our Mission" class="md:w-1/2 h-64 object-cover rounded-lg shadow">
+    </div>
+
+    <!-- Team -->
+    <div class="mb-8 flex flex-col md:flex-row items-center gap-6">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Team</h2>
+        <p class="text-gray-700 text-base leading-relaxed">Our dedicated team of certified travel experts brings unmatched professionalism and care. With continuous training and decades of collective experience, we craft journeys tailored to every traveler’s needs.</p>
+      </div>
+      <img src="images/ourteam.jpg" alt="Our Team" class="md:w-1/2 h-64 object-cover rounded-lg shadow">
+    </div>
+
+    <!-- Partnerships -->
+    <div class="mb-8 flex flex-col md:flex-row-reverse items-center gap-6">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Partnership</h2>
+        <p class="text-gray-700 text-base leading-relaxed">Travel Creations is the exclusive representative of <a href="https://www.reedmackay.com" target="_blank" class="text-orange-500 hover:underline">Reed & Mackay</a> in Kenya. Together, we provide world-class corporate travel management, global account solutions, and 24/7/365 traveler support.</p>
+      </div>
+      <img src="images/RM-Logo_POS.png" alt="Our Partnership" class="md:w-1/2 h-64 object-cover rounded-lg shadow">
+    </div>
+
+    <!-- Core Values -->
+    <div class="mb-8 flex flex-col md:flex-row items-center gap-6">
+      <div class="md:w-1/2">
+        <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Core Values</h2>
+        <p class="text-gray-700 text-base leading-relaxed">Our foundation is built on Respect, Integrity, Excellence, Communication, and Commitment — values that guide every journey we plan.</p>
+      </div>
+      <img src="images/corevalues.jpg" alt="Our Values" class="md:w-1/2 h-64 object-cover rounded-lg shadow">
+    </div>
+
+    <!-- Testimonials -->
+<div class="mb-6">
+  <h2 class="text-2xl font-bold text-blue-900 mb-3 text-center">Testimonials</h2>
+  <div class="relative slider bg-blue-900/70 rounded-lg shadow-lg p-6 text-white" id="testimonialsSlider">
+    <!-- Slide 1 -->
+    <div class="slide active">
+      <div class="text-center">
+        <p class="text-sm leading-relaxed italic mb-2">
+          "We would like to thank Travel Creations for a wonderful holiday in Zanzibar and Kenya Masai Mara..."
+        </p>
+        <p class="font-semibold text-sm">- The Sandstrom Family, Finland</p>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="slide">
+      <div class="text-center">
+        <p class="text-sm leading-relaxed italic mb-2">
+          "We have been working with Travel Creations Limited since 2010..."
+        </p>
+        <p class="font-semibold text-sm">- Monica Buyu, Kenya</p>
+      </div>
+    </div>
+    <!-- Buttons -->
+        <button class="slider-btn prev" onclick="changeTestimonial(-1)">❮</button>
+        <button class="slider-btn next" onclick="changeTestimonial(1)">❯</button>
+      </div>
+    </div>
+
+  </div>
+   <!-- Affiliations -->
+    <div class="container mx-auto max-w-7xl px-4 mb-8">
+      <h2 class="text-2xl font-bold text-blue-900 mb-6 text-center">Our Affiliations</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-5 gap-6">
+        <div class="bg-white rounded-lg shadow p-4 flex justify-center items-center hover:scale-105 transition">
+          <img src="images/aboutus_relations_iata.jpg" alt="IATA Logo" class="h-12">
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 flex justify-center items-center hover:scale-105 transition">
+          <img src="images/aboutus_relations_uftaa.jpg" alt="UFTAA Logo" class="h-12">
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 flex justify-center items-center hover:scale-105 transition">
+          <img src="images/aboutus_relations_kata.jpg" alt="KATA Logo" class="h-12">
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 flex justify-center items-center hover:scale-105 transition">
+          <img src="images/aboutus_relations_kato.jpg" alt="KATO Logo" class="h-12">
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 flex justify-center items-center hover:scale-105 transition">
+          <img src="images/aboutus_relations_ktf.jpg" alt="aboutus_relations_ktf Logo" class="h-12">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Our Location -->
+<div class="container mx-auto max-w-7xl px-4 text-center">
+    <h2 class="text-2xl font-bold text-blue-900 mb-4">Our Location</h2>
+    <p class="text-gray-700 max-w-2xl mx-auto text-base">
+      Visit us in the heart of Nairobi, Kenya. We are conveniently located to serve you better.
+    </p>
+
+    <div class="mt-4">
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3988.7918018156192!2d36.8145552!3d-1.2997319!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f11c966a6d693%3A0x1ed05376c31b41b6!2sTravel%20Creations%20-%20R%26M%20Kenya!5e0!3m2!1sen!2ske!4v1759138492316!5m2!1sen!2ske" 
+        width="100%" 
+        height="320" 
+        style="border:0;" 
+        allowfullscreen 
+        loading="lazy" 
+        referrerpolicy="no-referrer-when-downgrade" 
+        class="rounded-lg shadow">
+      </iframe>
+    </div>
+
+    <!-- Button to open in Google Maps -->
+    <a href="https://maps.app.goo.gl/KSgxnxENdBnrYyTa8" 
+       target="_blank" 
+       class="inline-block mt-4 px-5 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition">
+      📍 Open in Google Maps
+    </a>
+
+    <p class="text-gray-600 mt-2 text-sm">
+      * Map may not load in all environments. Contact us for precise directions.
+    </p>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer-bg text-white py-8">
+  <div class="container mx-auto max-w-7xl px-4">
+    <!-- Four columns -->
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      
+      <!-- Quick Links -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/corporate" class="hover:text-orange-500">Corporate Travel</a></li>
+          <li><a href="/leisure" class="hover:text-orange-500">Leisure Travel</a></li>
+          <li><a href="/mice" class="hover:text-orange-500">MICE</a></li>
+          <li><a href="/csr" class="hover:text-orange-500">CSR</a></li>
+          <li><a href="/blog" class="hover:text-orange-500">Blog</a></li>
+        </ul>
+      </div>
+
+      <!-- Share Your Travel Experience -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Share Your Travel Experience!</h3>
+        <p class="text-sm mb-4">
+          Did you enjoy your last trip? We want to hear about it!  
+          Upload photos, trip itinerary, and more on our Facebook page.
+        </p>
+        <div class="flex space-x-3">
+          <a href="https://x.com/TravelCreation_" aria-label="Follow us on X" class="hover:text-orange-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/travelcreationsltd/" aria-label="Follow us on Facebook" class="hover:text-orange-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/travelcreationsltd/" aria-label="Follow us on Instagram" class="hover:text-orange-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/company/travelcreationsltd/about/" aria-label="Follow us on LinkedIn" class="hover:text-orange-500">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.27c-.966 0-1.75-.79-1.75-1.75s.784-1.75 1.75-1.75 1.75.79 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.27h-3v-5.5c0-1.38-1.12-2.5-2.5-2.5s-2.5 1.12-2.5 2.5v5.5h-3v-10h3v1.5c.69-1 1.98-1.5 3.5-1.5 2.48 0 4.5 2.02 4.5 4.5v5.5z"/></svg>
+          </a>
+        </div>
+      </div>
+
+   <!-- Mailing List -->
+      <div>
+        <h3 class="text-lg font-bold mb-2">Join Our Mailing List</h3>
+        <p class="text-sm mb-1">Get exclusive travel deals and updates!</p>
+        <div id="mc_embed_signup">
+          <form action="https://travelcreations.us11.list-manage.com/subscribe/post?u=10d584ede58dd461646752e74&id=b7b4d105f2" 
+                method="post" target="_blank" 
+                class="flex flex-col space-y-1">
+            <input type="email" name="EMAIL" placeholder="Email Address" required class="p-2 text-sm text-black rounded">
+            <input type="text" name="FNAME" placeholder="First Name" required class="p-2 text-sm text-black rounded">
+            <button type="submit" class="bg-orange-500 hover:bg-orange-600 text-blue-900 font-bold py-2 rounded text-sm">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Contact Us -->
+      <div>
+        <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+        <p class="text-sm">Call Center: +254 (20) 6648000</p>
+        <p class="text-sm">Emergencies 24HRS: +254 722 335 866 / +254 734 600 842</p>
+        <p class="text-sm mt-2">
+          Email: <a href="mailto:reservations@travelcreations.co.ke" class="hover:text-orange-500">
+            reservations@travelcreations.co.ke
+          </a>
+        </p>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div class="mt-8 text-center text-sm border-t border-white/20 pt-4">
+      © 2025 Travel Creations Ltd. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<!-- SCRIPTS -->
+<script>
+   function toggleMobileMenu(forceClose = false) {
+        const menu = document.getElementById('mobileMenu');
+
+        if (forceClose) {
+            // Always hide menu
+            menu.classList.add('mobile-menu-hidden');
+        } else {
+            // Toggle menu
+            menu.classList.toggle('mobile-menu-hidden');
+        }
+    }
+
+    function toggleSubMenu(id) {
+        const submenu = document.getElementById(id);
+        submenu.classList.toggle('submenu-open');
+        submenu.classList.toggle('hidden');
+    }
+
+    // Close menu when any link inside it is clicked
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+        link.addEventListener('click', () => toggleMobileMenu(true));
+    });
+   // Toggle main mobile menu
+  function toggleMobileMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('hidden');
+  }
+ // Toggle mobile submenus
+  function toggleSubMenu(id) {
+    const submenu = document.getElementById(id);
+    submenu.classList.toggle('submenu-open');
+
+    // Toggle aria-expanded for accessibility
+    const button = submenu.previousElementSibling;
+    if(button.getAttribute('aria-expanded') === 'true') {
+      button.setAttribute('aria-expanded', 'false');
+    } else {
+      button.setAttribute('aria-expanded', 'true');
+    }
+  }
+
+// Testimonials slider
+let currentTestimonial = 0;
+const testimonialSlides = document.querySelectorAll('#testimonialsSlider .slide');
+if(testimonialSlides.length){
+  function showTestimonial(index){
+    testimonialSlides.forEach((s,i)=> s.classList.toggle('active', i===index));
+    currentTestimonial = index;
+  }
+  function changeTestimonial(direction){
+    let next = (currentTestimonial + direction + testimonialSlides.length) % testimonialSlides.length;
+    showTestimonial(next);
+  }
+  // auto-advance
+  setInterval(()=> changeTestimonial(1), 6000);
+  showTestimonial(0);
+}
+
+// Close mobile menu when clicking links
+document.addEventListener('click', function(e){
+  if(e.target.tagName === 'A' && e.target.closest('#mobileMenu')){
+    toggleMobileMenu(true);
+  }
+});
+</script>
+
+</body>
+</html>
