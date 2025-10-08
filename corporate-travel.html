@@ -1,65 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Travel Creations - Corporate Travel: Expert travel management solutions for businesses in Nairobi, Kenya">
-<title>Travel Creations | Corporate Travel</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link href="./dist/output.css" rel="stylesheet">
-<link rel="icon" href="images/favicon(1).ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Professional corporate travel management solutions for businesses and organizations in Kenya and beyond.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://travelcreations.co.ke/corporate-travel">
+  <title>Corporate Travel | Travel Creations Kenya</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+  <link href="./dist/output.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="./dist/output.css"></noscript>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="Corporate Travel | Travel Creations Kenya">
+  <meta property="og:description" content="Tailored corporate travel management — from flights and hotels to conferences and logistics.">
+  <meta property="og:image" content="https://travelcreations.co.ke/images/corporate-travel.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelcreations.co.ke/corporate-travel">
+  <meta name="theme-color" content="#132b70">
+
+
 
 <style>
-    html { font-size: 14px; }
-body { font-family: 'Open Sans', sans-serif; }
-h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }
-.header-top-bg { background-color: #1E3A8A; }
-.header-bg { background-color: #FFFFFF; }
-.footer-bg { background-color: #1E3A8A; }
-.sticky { position: sticky; top: 0; z-index: 50; }
-.hamburger div { width: 25px; height: 3px; background-color: #FFFFFF; margin: 5px 0; transition: all 0.3s ease; }
-.submenu { position: absolute; top: 100%; left: 0; background: white; min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); display: none; }
-.group:hover .submenu { display: block; }
-.slider { position: relative; overflow: hidden; height: 500px; }
-.slide { position: absolute; inset:0; opacity:0; transition: opacity 0.8s ease-in-out; display:flex; align-items:flex-end; justify-content:flex-start; padding:20px; color:white; z-index: 0;}
-.slide.active { opacity:1; z-index: 10;}
-.slider-dots button {width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.6); border: none; cursor: pointer; transition: background 0.3s;}
-.slider-dots button.active { background: #f97316; } /* Tailwind orange-500 */
-.slider-btn { position:absolute; top:50%; transform:translateY(-50%); background: rgba(30,58,138,0.7); color:white; padding:8px 12px; cursor:pointer; z-index:10; }
-.slider-btn.prev { left:10px; }
-.slider-btn.next { right:10px; }
-.slider-text { background: rgba(0,0,0,0.6); padding:20px; border-radius:8px; }
-.mobile-menu-hidden {transform: translateX(100%);}
-.mobile-menu-visible {transform: translateX(0); }
+  html { font-size: 14px; }
+  body { font-family: 'Open Sans', sans-serif; }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }
 
- .section-block {
-    background: #f9fafb; /* light gray */
-    padding: 1.5rem;
-    border-radius: 6px;
-    position: relative;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    margin-bottom: 2rem;
-  }
-
-  /* folded bottom-right corner */
-  .section-block::after {
-    content: "";
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    border-width: 0 0 40px 40px; /* size of the fold */
-    border-style: solid;
-    border-color: transparent transparent white transparent; /* fold color */
-    filter: drop-shadow(-2px -2px 3px rgba(0,0,0,0.1)); /* little shadow for realism */
-  }
-
-  .section-block h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #1E3A8A; /* navy */
-    margin-bottom: 1rem;}
-    @media (max-width:768px) {.submenu { display: none; position: static; opacity: 1 !important; pointer-events: auto !important; box-shadow: none; }
-    .submenu-open { display: block !important; }}
+  .header-top-bg { background-color: #132b70; } 
+  .header-bg { background-color: #FFFFFF; }
+  .footer-bg { background-color: #132b70; }
+  .sticky { position: sticky; top: 0; z-index: 50; }
+  .hamburger div { width: 25px; height: 3px; background-color: #FFFFFF; margin: 5px 0; transition: all 0.3s ease; }
+  .submenu { position: absolute; top: 100%; left: 0; background: white; min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); display: none; }
+  .group:hover .submenu { display: block; }
+  .slider { position: relative; overflow: hidden; height: 500px; }
+  .slide { position: absolute; inset:0; opacity:0; transition: opacity 0.8s ease-in-out; display:flex; align-items:flex-end; justify-content:flex-start; padding:20px; color:white; z-index: 0;}
+  .slide.active { opacity:1; z-index: 10;}
+  .slider-dots button {width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.6); border: none; cursor: pointer; transition: background 0.3s;}
+  .slider-dots button.active { background: #f97316; } /* Tailwind orange-500 */
+  .slider-btn { position:absolute; top:50%; transform:translateY(-50%); background: rgba(30,58,138,0.7); color:white; padding:8px 12px; cursor:pointer; z-index:10; }
+  .slider-btn.prev { left:10px; }
+  .slider-btn.next { right:10px; }
+  .slider-text { background: rgba(0,0,0,0.6); padding:20px; border-radius:8px; }
+  .mobile-menu-hidden {transform: translateX(100%);}
+  .mobile-menu-visible {transform: translateX(0); }
+  .section-block {background: #f9fafb; /* light gray */padding: 1.5rem; border-radius: 6px; position: relative; box-shadow: 0 2px 6px rgba(0,0,0,0.05); margin-bottom: 2rem;}
+  .section-block::after {content: ""; position: absolute; right: 0; bottom: 0; border-width: 0 0 40px 40px; /* size of the fold */border-style: solid; border-color: transparent transparent white transparent; /* fold color */filter: drop-shadow(-2px -2px 3px rgba(0,0,0,0.1)); /* little shadow for realism */}
+  .section-block h2 {font-size: 1.5rem;font-weight: bold; color: #1E3A8A; /* navy */ margin-bottom: 1rem;}
+  @media (max-width:768px) {.submenu { display: none; position: static; opacity: 1 !important; pointer-events: auto !important; box-shadow: none; }
+  .submenu-open { display: block !important; }}
 </style>
 
 </head>
@@ -187,23 +182,31 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacin
     <div class="container max-w-7xl mx-auto px-4 grid grid-cols-1 lg:grid-cols-12 gap-6">
     
      <!-- Main (9/12 width) -->
+
     <div class="lg:col-span-9 space-y-6">
-      
+      <div class="section-block">
+        <p class="text-gray-700 text-base leading-relaxed">
+          Experience corporate travel solutions in a new sphere. We recognize our clients have their own particular requirements. 
+          We ensure that we are fully acquainted with your priorities, requirements, and procurement goals, supporting these aims 
+          with effective travel management services and solutions.
+        </p>
+      </div>
+
       <!-- Slider -->
       <div class="relative slider rounded-lg overflow-hidden shadow h-[350px]">
-        <div class="slide active" style="background:url('images/business-travel.png') center/cover">
+        <div class="slide active" style="background:url('images/Businesshotel2.webp') center/cover">
           <div class="slider-text"><h3 class="text-2xl font-bold">Hotel Accommodation</h3>
             <p>Seamless bookings tailored to your business needs.</p></div>
         </div>
-        <div class="slide" style="background:url('images/slider/slider3.jpg') center/cover">
+        <div class="slide" style="background:url('images/airlinetravel.webp') center/cover">
           <div class="slider-text"><h3 class="text-2xl font-bold">Airline Travel</h3>
             <p>Over 30 years of offering the best rates.</p></div>
         </div>
-        <div class="slide" style="background:url('images/slider/slide7.jpg') center/cover">
-          <div class="slider-text"><h3 class="text-2xl font-bold">Car Rental</h3>
+        <div class="slide" style="background:url('images/transfers.webp') center/cover">
+          <div class="slider-text"><h3 class="text-2xl font-bold">Tranfers/Car Rental</h3>
             <p>Exclusive rates and 24/7 support worldwide.</p></div>
         </div>
-        <div class="slide" style="background:url('images/slider/slide6.jpg') center/cover">
+        <div class="slide" style="background:url('images/micecorporate.webp') center/cover">
           <div class="slider-text"><h3 class="text-2xl font-bold">Conferences & Meetings</h3>
             <p>Innovative planning for company events.</p></div>
         </div>
@@ -213,17 +216,10 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacin
       </div>
 
       <!-- Content Sections -->
-      <div class="section-block">
-        <h2 class="text-2xl font-bold text-blue-900 mb-4">Move Up to Travel Creations</h2>
-        <p class="text-gray-700 text-base leading-relaxed">
-          Experience corporate travel solutions in a new sphere. We recognize our clients have their own particular requirements. 
-          We ensure that we are fully acquainted with your priorities, requirements, and procurement goals, supporting these aims 
-          with effective travel management services and solutions.
-        </p>
-      </div>
+      
 
      <div class="section-block">
-        <h2 class="text-2xl font-bold text-blue-900 mb-4">Expertise</h2>
+        <h2> Expertise</h2>
         <p class="text-gray-700 text-base leading-relaxed">
           We know that our clients' experience of Travel Creations is governed by the skills and manners of our people – they are 
           our business. We do not compromise on the careful recruitment and selection of knowledgeable and expert staff. 
@@ -233,7 +229,7 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacin
       </div>
 
       <div class="section-block">
-        <h2 class="text-2xl font-bold text-blue-900 mb-4">Commitment</h2>
+        <h2> Commitment</h2>
         <p class="text-gray-700 text-base leading-relaxed">
           We remain committed to investing in technology and developing industry-leading solutions to meet our 
           clients' evolving travel needs. Our approach ensures we innovatively, efficiently, and consistently 
@@ -242,7 +238,7 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacin
       </div>
 
       <div class="section-block">
-        <h2 class="text-2xl font-bold text-blue-900 mb-4">Transparency</h2>
+        <h2>Transparency</h2>
         <p class="text-gray-700 text-base leading-relaxed">
           Travel services, often the second largest controllable expense, must be managed actively. 
           Our processes clarify costs, expectations, and performance both internally and externally. 
@@ -273,7 +269,7 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacin
         <li class="flex items-start space-x-3">
           <span class="text-lg">3️⃣</span>
           <div>
-            <h3 class="font-semibold text-blue-900">Car Rental</h3>
+            <h3 class="font-semibold text-blue-900">Transfers/Car Rental</h3>
             <p class="text-gray-700">Negotiated rates & 24/7 global support.</p>
           </div>
         </li>
@@ -285,6 +281,12 @@ h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacin
           </div>
         </li>
       </ul>
+      <div class="mt-8 text-center">
+       <a href="/contactus" 
+       class="inline-block bg-orange-500 text-white text-sm font-semibold px-5 py-2 rounded-lg shadow hover:bg-orange-600 transition">
+      Get in touch with us today
+    </a>
+  </div>
     </aside>
 
   </div>

@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Travel Creations - Missionary Travel: Expert solutions for missionaries with discounted fares and tailored services since 1995.">
-    <title>Travel Creations | Missionary Travel</title>
- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-     <link href="./dist/output.css" rel="stylesheet">
-     <link rel="icon" href="images/favicon(1).ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel Creations - Missionary Travel: Expert solutions for missionaries with discounted fares and tailored services.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://travelcreations.co.ke/missionary-travel">
+  <title>Travel Creations | Missionary Travel</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link href="./dist/output.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="./dist/output.css"></noscript>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="Missionary Travel | Travel Creations Kenya">
+  <meta property="og:description" content="Trusted by missions and churches — specialized travel services for faith-based groups.">
+  <meta property="og:image" content="https://travelcreations.co.ke/images/missionary-travel.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelcreations.co.ke/missionary-travel">
+  <meta name="theme-color" content="#132b70">
+
+
 <style>
   html { font-size: 14px; }
   body { font-family: 'Open Sans', sans-serif; }
- h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }.header-top-bg { background-color: #1E3A8A; }
-.header-top-bg { background-color: #1E3A8A; }
-.header-bg { background-color: #FFFFFF; }
-.footer-bg { background-color: #1E3A8A; }
-.sticky { position: sticky; top: 0; z-index: 50; }
-.submenu { position: absolute; top: 100%; left: 0; background: white; min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); display: none; }
-.group:hover .submenu { display: block; }
-.slider { position: relative; overflow: hidden; height: 500px; }
-.slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; display: flex; align-items: center;   /* center vertically */ justify-content: center; /* center horizontally */ padding: 20px;color: inherit; /* use text color defined inside (not forced white) */z-index: 0;}
-.slide.active { opacity:1; z-index: 10;}
-.slider-dots button {width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.6); border: none; cursor: pointer; transition: background 0.3s;}
-.slider-dots button.active { background: #f97316; } /* Tailwind orange-500 */
-.slider-btn { position:absolute; top:50%; transform:translateY(-50%); background: rgba(30,58,138,0.7); color:white; padding:8px 12px; cursor:pointer; z-index:10; }
-.slider-btn.prev { left:10px; }
-.slider-btn.next { right:10px; }
-.slider-text { background: rgba(0,0,0,0.6); padding:20px; border-radius:8px; }
-.mobile-menu-hidden {transform: translateX(100%);}
-.mobile-menu-visible {transform: translateX(0); }
+  h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }
+  .header-top-bg { background-color: #132b70; } 
+  .header-bg { background-color: #FFFFFF; }
+  .footer-bg { background-color: #132b70; }
+  .sticky { position: sticky; top: 0; z-index: 50; }
+  .submenu { position: absolute; top: 100%; left: 0; background: white; min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); display: none; }
+  .group:hover .submenu { display: block; }
+  .slider { position: relative; overflow: hidden; height: 300px; }
+  .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 0.8s ease-in-out; display: flex; align-items: center;   /* center vertically */ justify-content: center; /* center horizontally */ padding: 20px;color: inherit; /* use text color defined inside (not forced white) */z-index: 0;}
+  .slide.active { opacity:1; z-index: 10;}
+  .slider-dots button {width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.6); border: none; cursor: pointer; transition: background 0.3s;}
+  .slider-dots button.active { background: #f97316; } /* Tailwind orange-500 */
+  .slider-btn { position:absolute; top:50%; transform:translateY(-50%); background: rgba(30,58,138,0.7); color:white; padding:8px 12px; cursor:pointer; z-index:10; }
+  .slider-btn.prev { left:10px; }
+  .slider-btn.next { right:10px; }
+  .slider-text { background: rgba(0,0,0,0.6); padding:20px; border-radius:8px; }
+  .mobile-menu-hidden {transform: translateX(100%);}
+  .mobile-menu-visible {transform: translateX(0); }
  .section-block {
     background: #f9fafb; /* light gray */
     padding: 1.5rem;
@@ -186,7 +203,6 @@
       <!-- Missionary Travel Services -->
       <div class="section-block flex flex-col md:flex-row items-center gap-6">
         <div>
-          <h2 class="text-xl font-bold text-blue-900 mb-4">Missionary Travel Services</h2>
           <p class="text-gray-700">
             For over <strong>30 years</strong>, Travel Creations has been the trusted partner for missionaries
             answering divine calls across the globe. As a licensed agent for <strong>missionary fares</strong>
@@ -227,17 +243,23 @@
   <h2 class="text-2xl font-bold text-blue-900 mb-6 text-center">What Our Missionaries Say</h2>
 
   <!-- Slider -->
-  <div class="relative slider rounded-lg overflow-hidden shadow-md bg-white max-w-3xl mx-auto h-56 flex items-center justify-center">
+  <div class="relative slider rounded-lg overflow-hidden shadow-md bg-white max-w-5xl mx-auto h-56 flex items-center justify-center">
     
     <!-- Slide 1 -->
     <div class="slide active text-center w-full px-6">
   <div>
     <p class="text-gray-700 italic mb-6  leading-relaxed">
-      "Travel Creations made our mission to Kenya seamless. The discounted fares and extra baggage
-      allowance were a godsend!"
+      " We have been working with Travel Creations for over 20 years. During this time, they have
+    demonstrated particular strengths in managing student and missionary travel. Below are the
+    services they have efficiently offered us:"
     </p>
+      <p class="text-gray-700 italic mb-6 leading-relaxed">
+    Travel Creations' customer service and professionalism are unmatched. They have a resolve to
+    satisfy the client which is why we have worked with them for over 20 years. We therefore have no
+    hesitation in recommending them as providers of travel services.
+  </p>
     <p class="text-gray-600 font-semibold  mt-4 block">
-      – Pastor John Doe, USA
+      – Maxwel Adventist Academy, Office of the Vice Principal
     </p>
   </div>
 </div>
@@ -245,10 +267,17 @@
 <div class="slide hidden text-center w-full px-6">
   <div>
     <p class="text-gray-700 italic mb-6 leading-relaxed">
-      "Their logistics support for our group mission was flawless—truly a blessing for our work."
+      Travel Creations has been providing humanitarian and missionary airfares for meetings and
+workshops organizations by the ADRA network (ADRA International, ADRA Somalia, and ADRA
+South Sudan for 12 yrs) and ADRA Kenya for over two decades. They have also provided
+conference management services.</p>
+<p class="text-gray-700 italic mb-6 leading-relaxed">
+      I have been acquainted with Travel Creations personnel since 1998.</p>
+<p class="text-gray-700 italic mb-6 leading-relaxed">
+      I can whole-heartedly recommend Travel Creations.</p>
     </p>
     <p class="text-gray-600 font-semibold mt-4 block">
-      – Sister Mary, UK
+      – James Astleford, ADRA Kenya
     </p>
   </div>
 </div>

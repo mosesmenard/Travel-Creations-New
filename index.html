@@ -2,88 +2,77 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Travel Creations - Your premier travel agency in Nairobi, Kenya for corporate and leisure travel">
-<title>Travel Creations | Imagine it we create it</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-<link href="./dist/output.css" rel="stylesheet">
-<link rel="icon" href="images/favicon(1).ico" type="image/x-icon">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Travel Creations - Your premier travel agency in Nairobi, Kenya for corporate and leisure travel">
+  <meta name="robots" content="index, follow">
 
-<style>
-  
+  <!-- Canonical -->
+  <link rel="canonical" href="https://travelcreations.co.ke/">
+
+  <!-- Title -->
+  <title>Travel Creations | Imagine it, we create it</title>
+
+  <!-- Preconnect for faster font load -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Optimized Google Fonts -->
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap"
+    rel="stylesheet">
+
+  <!-- Load Tailwind output asynchronously -->
+  <link href="./dist/output.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="./dist/output.css"></noscript>
+
+  <!-- Favicon -->
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <!-- Social / Open Graph -->
+  <meta property="og:title" content="Travel Creations | Imagine it, we create it">
+  <meta property="og:description" content="Corporate, leisure, and MICE travel — seamless, efficient, and tailored by Travel Creations Kenya.">
+  <meta property="og:image" content="https://travelcreations.co.ke/images/hero.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelcreations.co.ke/">
+
+  <!-- Accessibility & Theme -->
+  <meta name="theme-color" content="#132b70">
+
+<style> 
   html { font-size: 14px; }
   body { font-family: 'Open Sans', sans-serif; }
   h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }
 
-  .header-top-bg { background-color: #1E3A8A; } /* Suggest #0A2472 as an alternative*/
+  .header-top-bg { background-color: #132b70; } 
   .header-bg { background-color: #FFFFFF; }
-  .footer-bg { background-color: #1E3A8A; }
-
-  .hero-bg {
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('images/hero.jpg');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-  }
-
+  .footer-bg { background-color: #132b70; }
+  .hero-bg { background-size: cover; background-position: center;background-attachment: fixed;}
   .sticky { position: sticky; top: 0; z-index: 50; }
 
   .hamburger div { width: 25px; height: 3px; background-color: #FFFFFF; margin: 5px 0; transition: all 0.3s ease; }
-
   .error-message { display: none; color: #DC2626; font-size: 0.875rem; }
   .error-message.active { display: block; }
-
-
   /* Desktop submenu */
-  .group { position: relative; }
-  .group .submenu {
-    position: absolute; top: 100%; left: 0; background-color: white; color: #1E3A8A;
-    min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1);
-    opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 0.3s ease;
-    z-index: 1000; margin-top: 0.25rem;
-  }
-  .submenu-visible { opacity: 1 !important; visibility: visible !important; pointer-events: auto !important; }
-  
+     .submenu { position: absolute; top: 100%; left: 0; background: white; min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); display: none; }
+    .group:hover .submenu { display: block; }
   /* Mobile submenu */
   @media (max-width: 768px) {
     .submenu { display: none; position: static; opacity: 1 !important; pointer-events: auto !important; box-shadow: none; }
     .submenu-open { display: block !important; }
-    .hero-bg { background-attachment: scroll; }
-  }
-/* Default desktop style */
-#golibeFlightEngine {
-  overflow: hidden;
-}
-
-#golibeFlightEngine iframe {
-  width: 100%;
-  height: 420px;
-  border: none;
-  border-radius: 0.75rem;
-  overflow: hidden;
-}
-
-/* Hide iframe scrollbar for desktop */
-#golibeFlightEngine iframe::-webkit-scrollbar {
-  display: none;
-}
-
-/* ===== MOBILE FIX ===== */
+    .hero-bg { background-attachment: scroll; }}
+  /* Default desktop style */
+  #golibeFlightEngine { overflow: hidden;}
+  #golibeFlightEngine iframe { width: 100%; height: 420px; border: none; border-radius: 0.75rem;overflow: hidden;}
+  /* Hide iframe scrollbar for desktop */
+  #golibeFlightEngine iframe::-webkit-scrollbar { display: none;}
+  /* ===== MOBILE FIX ===== */
 @media (max-width: 768px) {
-  #golibeFlightEngine {
-    overflow: visible; /* allow iframe to show fully */
-  }
-
-  #golibeIframe {
-    height: 600px !important; /* increased to fit iframe content */
-    overflow: auto !important;
-    
-  }
-}
-
+  #golibeFlightEngine { overflow: visible; /* allow iframe to show fully */}
+  #golibeIframe { height: 600px !important; /* increased to fit iframe content */overflow: auto !important;}}
 </style>
 </head>
+
 <body class="bg-gray-100">
 
 <!-- Top Header -->
@@ -205,7 +194,7 @@
   <div id="heroSlider" class="absolute inset-0">
     <!-- Slide 1 -->
     <div class="absolute inset-0 bg-cover bg-center opacity-100 transition-opacity duration-1000"
-         style="background-image: url('images/hero.jpg');">
+         style="background-image: url('images/hero.webp');">
       <!-- Light overlay -->
       <div class="absolute inset-0 bg-black bg-opacity-20"></div>
       <div class="relative h-full w-full flex flex-col justify-center items-center text-center px-4">
@@ -216,22 +205,22 @@
     </div>
     <!-- Slide 2 -->
     <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
-         style="background-image: url('images/hero2.jpg');">
+         style="background-image: url('images/hero2.webp');">
       <div class="absolute inset-0 bg-black bg-opacity-20"></div>
       <div class="relative h-full w-full flex flex-col justify-center items-center text-center px-4">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">Explore the Wild Beauty</h1>
         <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">Experience Kenya’s breathtaking safaris and adventures.</p>
-        <a href="#booking-form" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold">Start Exploring</a>
+        <a href="services-leisure-travel.html" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold">Start Exploring</a>
       </div>
     </div>
     <!-- Slide 3 -->
     <div class="absolute inset-0 bg-cover bg-center opacity-0 transition-opacity duration-1000"
-         style="background-image: url('images/hero3.jpg');">
+         style="background-image: url('images/hero3.webp');">
       <div class="absolute inset-0 bg-black bg-opacity-20"></div>
       <div class="relative h-full w-full flex flex-col justify-center items-center text-center px-4">
         <h1 class="text-4xl md:text-6xl font-bold mb-4">Seamless Corporate Travel</h1>
         <p class="text-lg md:text-xl mb-6 max-w-2xl mx-auto">Tailored solutions for business trips and conferences.</p>
-        <a href="#booking-form" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold">Book Today</a>
+        <a href="corporate-travel.html" class="bg-orange-500 text-white px-6 py-3 rounded-full hover:bg-orange-600 text-lg font-semibold">Book Today</a>
       </div>
     </div>
   </div>
@@ -255,6 +244,7 @@
     <div id="golibeFlightEngine" class="max-w-5xl mx-auto rounded-lg shadow-md overflow-hidden mb-1">
       <iframe 
         id="golibeIframe"
+        title="Travel Creations flight booking engine"
         src="https://travelcreations.golibe.com/iframe"
         width="100%" 
         frameborder="0"
@@ -286,7 +276,7 @@
         </div>
         <div class="p-4">
           <h4 class="text-lg font-semibold mb-2 text-blue-900">
-            <a href="aboutus" class="hover:text-orange-500">Welcome</a>
+            <a href="aboutus.html" class="hover:text-orange-500">Welcome</a>
           </h4>
           <p class="text-sm text-gray-600">
            Your trusted travel partner in Nairobi, Kenya. 
@@ -303,7 +293,7 @@
         </div>
         <div class="p-4">
           <h4 class="text-lg font-semibold mb-2 text-blue-900">
-            <a href="services" class="hover:text-orange-500">Travel Management</a>
+            <a href="services.html" class="hover:text-orange-500">Travel Management</a>
           </h4>
           <p class="text-sm text-gray-600">
            At Travel Creations, we simplify corporate and leisure travel. From flights and accommodations to MICE and ground transport, our expert team ensures every trip is seamless, efficient, and tailored to your needs.
@@ -319,7 +309,7 @@
         </div>
         <div class="p-4">
           <h4 class="text-lg font-semibold mb-2 text-blue-900">
-            <a href="csr" class="hover:text-orange-500">CSR</a>
+            <a href="csr.html" class="hover:text-orange-500">CSR</a>
           </h4>
           <p class="text-sm text-gray-600">
             Our Corporate Social Responsibility Program has been an integral part of our business. Giving back to our communities is a great way to support those who support us.
@@ -335,7 +325,7 @@
         </div>
         <div class="p-4">
           <h4 class="text-lg font-semibold mb-2 text-blue-900">
-            <a href="contactus" class="hover:text-orange-500">Need Help?</a>
+            <a href="contactus.html" class="hover:text-orange-500">Need Help?</a>
           </h4>
           <p class="text-sm text-gray-600">
             We’re ready to help you plan your next trip. Our certified agents are available:
@@ -486,7 +476,6 @@ document.addEventListener("DOMContentLoaded", () => {
   // Auto slide every 6 seconds
   setInterval(nextSlide, 6000);
   showSlide(0);
-
 
   /* ================================
      MOBILE MENU TOGGLE

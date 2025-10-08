@@ -4,27 +4,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Travel Creations - Leisure Travel Services: Personalized holidays with exclusive deals since 1995.">
+  <meta name="robots" content="index, follow">
+
+  <link rel="canonical" href="https://travelcreations.co.ke/services-leisure-travel">
   <title>Travel Creations | Leisure Travel Services</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
-  <link href="./dist/output.css" rel="stylesheet">
-  <link rel="icon" href="images/favicon(1).ico" type="image/x-icon">
-  
+
+  <link href="./dist/output.css" rel="stylesheet" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="./dist/output.css"></noscript>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+
+  <meta property="og:title" content="Leisure Travel | Travel Creations Kenya">
+  <meta property="og:description" content="Plan your perfect getaway — beach holidays, safaris, and international adventures with Travel Creations.">
+  <meta property="og:image" content="https://travelcreations.co.ke/images/leisure-travel.jpg">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://travelcreations.co.ke/services-leisure-travel">
+  <meta name="theme-color" content="#132b70">
+
   <style>
-     html { font-size: 14px; }
+    html { font-size: 14px; }
     body { font-family: 'Open Sans', sans-serif; }
     h1, h2, h3 { font-family: 'Poppins', sans-serif; font-weight: 500; letter-spacing: 0.5px; }
-    .header-top-bg { background-color: #1E3A8A; }
+    .header-top-bg { background-color: #132b70; } 
     .header-bg { background-color: #FFFFFF; }
-    .footer-bg { background-color: #1E3A8A; }
+    .footer-bg { background-color: #132b70; }
     .sticky { position: sticky; top: 0; z-index: 50; }
     .submenu { position: absolute; top: 100%; left: 0; background: white; min-width: 200px; border-radius: 0.25rem; box-shadow: 0 5px 10px rgba(0,0,0,0.1); display: none; }
     .group:hover .submenu { display: block; }
-    .slider { position: relative; overflow: hidden; height: 450px; }
+    .slider { position: relative; overflow: hidden; height: 400px; }
     .slide { position: absolute; inset:0; opacity:0; transition: opacity 0.8s ease-in-out; display:flex; align-items:flex-end; justify-content:flex-start; padding:20px; color:white; z-index: 0;}
     .slide.active { opacity:1; z-index: 10;}
-    .slider-btn { position: absolute; top: 50%; transform: translateY(-50%); background: rgba(30,58,138,0.7); color: white; padding: 8px; border: none; cursor: pointer; }
-    .slider-btn.prev { left: 10px; }
-    .slider-btn.next { right: 10px; }
+    .slider-dots button {width: 12px; height: 12px; border-radius: 50%; background: rgba(255,255,255,0.6); border: none; cursor: pointer; transition: background 0.3s;}
+    .slider-dots button.active { background: #f97316; } /* Tailwind orange-500 */
+    .slider-btn { position:absolute; top:50%; transform:translateY(-50%); background: rgba(30,58,138,0.7); color:white; padding:8px 12px; cursor:pointer; z-index:10; }
+    .slider-btn.prev { left:10px; }
+    .slider-btn.next { right:10px; }
+    .slider-text { background: rgba(0,0,0,0.6); padding:20px; border-radius:8px; }
     .section-block { background: #f9fafb; padding: 1.5rem; border-radius: 6px; position: relative; margin-bottom: 2rem; box-shadow: 0 2px 6px rgba(0,0,0,0.05); }
     .section-block::after { content:""; position:absolute; right:0; bottom:0; border-width:0 0 40px 40px; border-style:solid; border-color:transparent transparent white transparent; filter:drop-shadow(-2px -2px 3px rgba(0,0,0,0.1)); }
     .section-block h2 { font-size: 1.5rem; font-weight: bold; color:#1E3A8A; margin-bottom: 1rem; }
@@ -166,46 +184,58 @@
         </div>
         <h2 class="text-2xl font-bold text-blue-900 mb-4">Explore Top Destinations</h2>
         <!-- Slider -->
-        <div class="relative slider rounded-lg overflow-hidden shadow h-[450px]">
-          <div class="slide active" style="background:url('images/kenya.jpg') center/cover">
+        <div class="relative slider rounded-lg overflow-hidden shadow h-[350px]">
+          <div class="slide active" style="background:url('images/kenya.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
              Kenya </span>
           </div>
-          <div class="slide" style="background:url('images/tanzania.jpg') center/cover">
+          <div class="slide" style="background:url('images/tanzania2.webp') center/cover">
          <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
-            Tanzania </span>
+            Zanzibar,Tanzania </span>
           </div>
-          <div class="slide" style="background:url('images/bali_indonesia.jpg') center/cover">
+          <div class="slide" style="background:url('images/bali_indonesia.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
              Bali, Indonesia </span>
           </div>
-          <div class="slide" style="background:url('images/cambodia.jpg') center/cover">
+          <div class="slide" style="background:url('images/cambodia.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
              Cambodia </span>
           </div>
-          <div class="slide" style="background:url('images/egypt.jpg') center/cover">
+          <div class="slide" style="background:url('images/egypt.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
              Egypt </span>
           </div>
-          <div class="slide" style="background:url('images/maldives.jpg') center/cover">
+          <div class="slide" style="background:url('images/maldives.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
              Maldives </span>
           </div>
-          <div class="slide" style="background:url('images/europe.jpg') center/cover">
+          <div class="slide" style="background:url('images/europe.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
-             Europe </span>
+             Santorini </span>
           </div>
-          <div class="slide" style="background:url('images/belarus.jpg') center/cover">
+          <div class="slide" style="background:url('images/belarus.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
-             Belarus </span>
+             Belarus, Eastern Europe </span>
           </div>
-          <div class="slide" style="background:url('images/morocco.jpg') center/cover">
+          <div class="slide" style="background:url('images/morocco.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
              Morocco </span>
           </div>
-          <div class="slide" style="background:url('images/mauritius.jpg') center/cover">
+          <div class="slide" style="background:url('images/mauritius.webp') center/cover">
             <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
              Mauritius </span>
+          </div>
+           <div class="slide" style="background:url('images/south_africa.webp') center/cover">
+            <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
+             South Africa </span>
+          </div>
+           <div class="slide" style="background:url('images/thailand.webp') center/cover">
+            <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
+             Thailand </span>
+          </div>
+           <div class="slide" style="background:url('images/uae.webp') center/cover">
+            <span class="absolute bottom-6 left-6 text-white text-lg sm:text-2xl md:text-3xl lg:text-4xl font-extrabold drop-shadow-lg">
+             UAE </span>
           </div>
           <button class="slider-btn prev">❮</button>
           <button class="slider-btn next">❯</button>
@@ -439,20 +469,53 @@
     }
   });
 
-  // Slider
+  /* ========== Slider ========== */
+  const slides = document.querySelectorAll(".slide");
+  const dotsContainer = document.querySelector(".slider-dots");
   let currentSlide = 0;
-  const slides = document.querySelectorAll('.slide');
-  const totalSlides = slides.length;
-  function changeSlide(direction) {
-    slides[currentSlide].classList.remove('active');
-    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
-    slides[currentSlide].classList.add('active');
-  }
-  document.querySelector(".slider-btn.prev").onclick = () => changeSlide(-1);
-  document.querySelector(".slider-btn.next").onclick = () => changeSlide(1);
-  setInterval(() => changeSlide(1), 5000);
+  let autoSlide;
 
-    // Close mobile menu when resizing to desktop
+  if (slides.length && dotsContainer) {
+    // Create dots
+    slides.forEach((_, i) => {
+      const dot = document.createElement("button");
+      dot.addEventListener("click", () => {
+        currentSlide = i;
+        showSlide(currentSlide);
+        resetAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+    });
+  }
+
+  const dots = dotsContainer ? dotsContainer.querySelectorAll("button") : [];
+
+  function showSlide(index) {
+    slides.forEach((slide, i) => slide.classList.toggle("active", i === index));
+    dots.forEach((dot, i) => dot.classList.toggle("active", i === index));
+  }
+
+  function changeSlide(direction) {
+    currentSlide = (currentSlide + direction + slides.length) % slides.length;
+    showSlide(currentSlide);
+  }
+
+  const prevBtn = document.querySelector(".slider-btn.prev");
+  const nextBtn = document.querySelector(".slider-btn.next");
+  if (prevBtn) prevBtn.addEventListener("click", () => { changeSlide(-1); resetAutoSlide(); });
+  if (nextBtn) nextBtn.addEventListener("click", () => { changeSlide(1); resetAutoSlide(); });
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => changeSlide(1), 5000);
+  }
+
+  if (slides.length) {
+    showSlide(currentSlide);
+    autoSlide = setInterval(() => changeSlide(1), 5000);
+  }
+
+  // Close mobile menu when resizing to desktop
   window.addEventListener('resize', function() {
     const menu = document.getElementById('mobileMenu');
     if (window.innerWidth >= 768) {
